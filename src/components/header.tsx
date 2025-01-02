@@ -8,7 +8,7 @@ const Header = () => {
             <Card className="">
                 <CardContent className="p-1 justify-center flex items-center flex-row">
                     <Link href="/">
-                        {/* TODO: alterar cor de fundo ou a logo */}
+                        {/* TODO: alterar cor de fundo do app */}
                         <Image src="/logo.png" alt="Deh do Marketing" height={22} width={70} />
                     </Link>
                 </CardContent>

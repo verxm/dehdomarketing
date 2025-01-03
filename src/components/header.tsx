@@ -6,10 +6,11 @@ const Header = () => {
     return (
         <header>
             <Card className="">
-                <CardContent className="p-1 justify-center flex items-center flex-row">
+                <CardContent className="p-2 justify-center flex items-center flex-row">
                     <Link href="/">
-                        {/* TODO: alterar cor de fundo do app */}
-                        <Image src="/logo.png" alt="Deh do Marketing" height={22} width={70} />
+                    <div className="bg-primary text-white text-xl font-bold h-20 w-20 flex items-center justify-center rounded-full mx-auto shadow-md">
+                        <Image src="/logo.png" alt="Deh do Marketing" height={100} width={100} />
+                    </div>
                     </Link>
                 </CardContent>
             </Card>

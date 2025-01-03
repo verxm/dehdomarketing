@@ -5,12 +5,10 @@ import Image from "next/image";
 const Header = () => {
     return (
         <header>
-            <Card className="">
-                <CardContent className="p-2 justify-center flex items-center flex-row">
+            <Card>
+                <CardContent className="p-2 justify-between flex flex-row ml-2">
                     <Link href="/">
-                    <div className="bg-primary text-white text-xl font-bold h-20 w-20 flex items-center justify-center rounded-full mx-auto shadow-md">
-                        <Image src="/logo.png" alt="Deh do Marketing" height={100} width={100} />
-                    </div>
+                        <Image src="/logo-sem-fundo-marrom.png" alt="Deh do Marketing" height={100} width={70} />
                     </Link>
                 </CardContent>
             </Card>

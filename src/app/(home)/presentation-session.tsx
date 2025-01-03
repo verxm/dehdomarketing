@@ -1,13 +1,9 @@
 import { FlipWords } from "@/components/flip-words";
-import Header from "@/components/header";
 
-export default function Home() {
-  const words = ["propósito", "estratégia", "qualidade", "segurança"];
+const PresentationSession = () => {
+    const words = ["propósito", "estratégia", "qualidade", "segurança"];
 
-  return (
-    <>
-      <Header />
-
+    return ( 
         <div className="flex flex-col justify-center items-center text-center max-w-5xl mx-auto px-5 pt-6">
           <h1 className="text-4xl mb-4 tracking-tighter">
             Marketing com
@@ -19,7 +15,7 @@ export default function Home() {
             Soluções de comunicação de forma criativa e aplicadas a estratégias assertivas
           </p>
         </div>
-
-    </>
-  );
+     );
 }
+ 
+export default PresentationSession;

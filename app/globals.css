@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background text-foreground antialiased h-screen flex flex-col;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 @layer base {

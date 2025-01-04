@@ -1,4 +1,4 @@
-import { FlipWords } from "@/components/flip-words";
+import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
 
 const PresentationSession = () => {

@@ -4,13 +4,13 @@ const {
 	default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-export default {
-	content: [
-		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-	],
+const config: Config = {
 	darkMode: ["class"],
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -59,20 +59,11 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			},
-			animation: {
-				move: "move 5s linear infinite",
-			},
-			keyframes: {
-				move: {
-					"0%": { transform: "translateX(-200px)" },
-					"100%": { transform: "translateX(200px)" },
-				},
-			},
+			}
 		}
 	},
-	plugins: [addVariablesForColors, require("tailwindcss-animate")],
-} satisfies Config;
+	plugins: [require("tailwindcss-animate"), addVariablesForColors],
+};
 
 function addVariablesForColors({ addBase, theme }: any) {
 	let allColors = flattenColorPalette(theme("colors"));
@@ -84,3 +75,5 @@ function addVariablesForColors({ addBase, theme }: any) {
 		":root": newVars,
 	});
 }
+
+export default config;

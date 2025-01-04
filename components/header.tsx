@@ -5,7 +5,7 @@ import Image from "next/image";
 const Header = () => {
     return (
         <header>
-            <Card>
+            <Card className="rounded-t-none">
                 <CardContent className="p-2 justify-between flex flex-row ml-2">
                     <Link href="/">
                         <Image src="/logo-sem-fundo-marrom.png" alt="Deh do Marketing" height={100} width={70} />

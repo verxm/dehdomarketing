@@ -6,7 +6,7 @@ const PresentationSession = () => {
 
     return (
         <div className="flex flex-col justify-center items-center text-center max-w-5xl mx-auto">
-            <div className="bg-primary text-white text-xl font-bold h-40 w-40 flex items-center justify-center rounded-full shadow-md">
+            <div className="border-x-4 border-white bg-primary text-white text-xl font-bold h-40 w-40 flex items-center justify-center rounded-full shadow-md">
                 <Image src="/logo.png" alt="Logo Deh do Marketing" height={200} width={200} />
             </div>
 

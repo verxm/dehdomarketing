@@ -1,12 +1,19 @@
 import Header from "@/components/header";
 import PresentationSession from "./presentation-session";
+import Contacts from "@/components/contacts";
 
 export default function Home() {
   return (
-      <>
-        <Header />
-        
+    <>
+      <Header />
+
+      <div className="pt-14 px-7">
         <PresentationSession />
-      </>
+
+        <div className="pt-5">
+          <Contacts />
+        </div>
+      </div>
+    </>
   );
 }

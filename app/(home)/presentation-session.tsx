@@ -1,6 +1,5 @@
 import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
-import { tanPearl } from "../layout";
 
 const PresentationSession = () => {
     const words = ["propósito", "estratégia", "qualidade", "segurança"];

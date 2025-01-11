@@ -1,4 +1,3 @@
-import CardImage from "./card-image";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import Image from "next/image";
@@ -36,11 +35,6 @@ const ServiceItem = ({ name, description, imagePath }: ServiceItemParameters) =>
                     </CardFooter>
                 </Card>
             </div>
-
-            <CardImage
-                title={name}
-                description={description}
-                image={imagePath} />
         </>
     );
 }

@@ -17,14 +17,13 @@ export default function Home() {
 
         <ServiceItem
           name="Gestão de Redes Sociais"
-          description="Planejamento e desenvolvimento de conteúdos
-            para as redes sociais;
-            Desenvolvimento de banners e imagens;
-            Roteiro para stories e vídeos;
-            Criação de legendas persuasivas;
-            Captação e edição de vídeos;
-            Briefing, análise de dados para entender melhor
-            a necessidade do público alvo;"
+          description="▸ Planejamento e desenvolvimento de conteúdos para as redes sociais\n
+            ▸ Desenvolvimento de banners e imagens\n
+            ▸ Roteiro para stories e vídeos\n
+            ▸ Criação de legendas persuasivas\n
+            ▸ Captação e edição de vídeos\n
+            ▸ Briefing, análise de dados para entender melhor
+            ▸ a necessidade do público alvo"
           imagePath="/gestao-de-redes-sociais.jpeg" />
       </div>
     </>

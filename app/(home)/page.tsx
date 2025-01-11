@@ -22,8 +22,7 @@ export default function Home() {
             ▸ Roteiro para stories e vídeos\n
             ▸ Criação de legendas persuasivas\n
             ▸ Captação e edição de vídeos\n
-            ▸ Briefing, análise de dados para entender melhor
-            ▸ a necessidade do público alvo"
+            ▸ Briefing, análise de dados para entender melhor a necessidade do público alvo"
           imagePath="/gestao-de-redes-sociais.jpeg" />
       </div>
     </>

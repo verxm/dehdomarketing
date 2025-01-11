@@ -1,3 +1,4 @@
+import LineBreakText from "./line-break-text";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import Image from "next/image";
@@ -26,9 +27,9 @@ const ServiceItem = ({ name, description, imagePath }: ServiceItemParameters) =>
                         </div>
 
                         <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{name}</h2>
-                        <div className="pl-2 pt-2 text-sm text-muted-foreground line-clamp-5">{description.split('\\n').map((line) => (
-                            <p className="line-clamp-1">{line}</p>
-                        ))}</div>
+                        <div className="pl-2 pt-2 text-sm text-muted-foreground">
+                            <LineBreakText text={description} lineClassName="line-clamp-1" maxLinesNumber={4} />
+                        </div>
                     </CardContent>
                     <CardFooter className="flex justify-end p-5 pt-1">
                         <Button variant="outline">Ver mais</Button>

@@ -14,10 +14,6 @@ const ServiceItem = ({ name, description, imagePath }: ServiceItemParameters) =>
         <>
             <div className="py-5">
                 <Card className="min-w-full max-w-full rounded-2xl">
-                    {/* <CardHeader>
-                        <CardTitle>{name}</CardTitle>
-                        <CardDescription className="line-clamp-3">{description}</CardDescription>
-                    </CardHeader> */}
                     <CardContent className="px-2 py-2">
                         <div className="relative w-full h-[300px]">
                             <Image

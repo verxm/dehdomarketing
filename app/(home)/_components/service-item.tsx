@@ -25,9 +25,9 @@ const ServiceItem = ({ name, description, imagePath }: ServiceItemParameters) =>
                 </div>
 
                 <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{name}</h2>
-                <div className="pl-2 pt-2 text-sm text-muted-foreground min-h-[90px] max-h-[90px]">
-                    <LineBreakText text={description} lineClassName="line-clamp-1" maxLinesNumber={4} />
-                </div>
+                <p className="pl-2 pt-2 text-sm text-muted-foreground min-h-[90px] max-h-[90px] whitespace-pre-line line-clamp-4">
+                    {description}
+                </p>
             </CardContent>
             <CardFooter className="flex justify-end p-5 pt-1">
                 <Button variant="outline">Ver mais</Button>

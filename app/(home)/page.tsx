@@ -1,7 +1,7 @@
 import Header from "@/components/header";
-import PresentationSession from "./presentation-session";
-import Contacts from "@/components/contacts";
-import ServiceItem from "@/components/service-item";
+import PresentationSession from "./_components/presentation-session";
+import Contacts from "@/app/(home)/_components/contacts";
+import ServiceItem from "@/app/(home)/_components/service-item";
 
 export default function Home() {
   return (

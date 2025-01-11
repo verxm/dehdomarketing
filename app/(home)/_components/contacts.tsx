@@ -1,4 +1,4 @@
-import ContactButton, { ContactType } from "./contact-button";
+import ContactButton, { ContactType } from "../../../components/contact-button";
 
 const Contacts = () => {
     return (

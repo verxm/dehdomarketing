@@ -1,11 +1,5 @@
+import { Service } from "@/entities/service";
 import ServiceItem from "./service-item";
-
-interface Service {
-    id: string,
-    name: string,
-    description: string,
-    image: string,
-}
 
 const ServicesSession = () => {
     const services: Service[] = [

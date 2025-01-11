@@ -5,7 +5,7 @@ interface LineBreakTextParameters {
 }
 
 const LineBreakText = ({ text, lineClassName, maxLinesNumber }: LineBreakTextParameters) => {
-    let lines = text.split('\\n');
+    let lines = text.split('\n');
 
     if (maxLinesNumber) {
         lines = lines.slice(0, maxLinesNumber);

@@ -1,7 +1,6 @@
-import { desc } from "framer-motion/client";
 import CardImage from "./card-image";
 import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
 import Image from "next/image";
 
 interface ServiceItemParameters {

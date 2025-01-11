@@ -25,7 +25,7 @@ const ServiceItem = ({ name, description, imagePath }: ServiceItemParameters) =>
                 </div>
 
                 <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{name}</h2>
-                <div className="pl-2 pt-2 text-sm text-muted-foreground">
+                <div className="pl-2 pt-2 text-sm text-muted-foreground min-h-[90px] max-h-[90px]">
                     <LineBreakText text={description} lineClassName="line-clamp-1" maxLinesNumber={4} />
                 </div>
             </CardContent>

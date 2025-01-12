@@ -16,8 +16,8 @@ const PresentationSession = () => {
                 <b><FlipWords className="font-tanpearl text-primary w-[50]" words={words} /> </b>
             </h1>
 
-            <p className="max-w-xl mx-auto text-xl">
-                Soluções de comunicação de forma criativa e aplicadas a estratégias assertivas de quem ama o que faz para quem ama o que faz
+            <p className="max-w-xl mx-auto text-base text-neutral-600">
+            Tudo o que sua marca precisa para conquistar <b>resultados de impacto</b>. Oferecemos soluções criativas, alinhadas a <b>estratégias precisas</b>, para levar sua comunicação a um <b>novo nível</b>.
             </p>
         </div>
     );

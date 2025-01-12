@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Header = () => {
     return (
-        <header>
+        <header className="mt-[-1px] mr-[-1px] ml-[-1px]">
             <Card className="rounded-t-none">
                 <CardContent className="p-2 justify-between flex flex-row ml-2 items-center">
                     <Link href="/">

@@ -24,7 +24,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
             <DrawerContent>
                 <div className="mx-auto w-full max-w-sm">
                     <DrawerHeader className="pt-1">
-                        <DrawerTitle>{service.name}</DrawerTitle>
+                        <DrawerTitle className="uppercase">{service.name}</DrawerTitle>
                     </DrawerHeader>
                     <div className="p-2 pb-0">
                         <div className="space-x-2">

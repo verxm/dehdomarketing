@@ -35,7 +35,6 @@ const ContacButton = ({ contactType }: ContactButtonParameters) => {
     }
 
     return (
-        // TODO: ver se ela gosta do tooltipe para mobile - opição: popover
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>

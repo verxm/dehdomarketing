@@ -1,5 +1,5 @@
 import ServiceItem from "./service-item";
-import { servicesRepository } from "@/repositories/services-local-repository";
+import { servicesRepository } from "@/app/_repositories/services-local-repository";
 
 const ServicesSession = () => {
     const services = servicesRepository.getAll();

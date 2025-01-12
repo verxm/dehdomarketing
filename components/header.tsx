@@ -12,7 +12,7 @@ const Header = () => {
                         <Image src="/logo-sem-fundo-marrom.png" alt="Deh do Marketing" height={100} width={70} />
                     </Link>
 
-                    <Button className="font-bold rounded-full mr-3" size="sm">
+                    <Button className="font-bold rounded-full mr-3 text-primary" variant="outline" size="sm">
                         Começar
                     </Button>
                 </CardContent>

@@ -1,19 +1,21 @@
+import { Service } from "@/app/_entities/service";
 import { Button } from "@/components/ui/button";
 import {
     Drawer,
     DrawerClose,
     DrawerContent,
-    DrawerDescription,
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer"
+import Image from "next/image";
 
-import { Minus, Plus } from "lucide-react"
+interface ServiceDetailParameters {
+    service: Service
+}
 
-
-const ServiceDetail = () => {
+const ServiceDetail = ({ service }: ServiceDetailParameters) => {
     return (
         <Drawer>
             <DrawerTrigger asChild>
@@ -22,45 +24,30 @@ const ServiceDetail = () => {
             <DrawerContent>
                 <div className="mx-auto w-full max-w-sm">
                     <DrawerHeader>
-                        <DrawerTitle>Move Goal</DrawerTitle>
-                        <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+                        <DrawerTitle>{service.name}</DrawerTitle>
                     </DrawerHeader>
-                    <div className="p-4 pb-0">
-                        <div className="flex items-center justify-center space-x-2">
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="h-8 w-8 shrink-0 rounded-full"
-                                disabled={true}
-                            >
-                                <Minus />
-                                <span className="sr-only">Decrease</span>
-                            </Button>
-                            <div className="flex-1 text-center">
-                                <div className="text-7xl font-bold tracking-tighter">
-                                    {400}
-                                </div>
-                                <div className="text-[0.70rem] uppercase text-muted-foreground">
-                                    Calories/day
-                                </div>
+                    <div className="p-2 pb-0">
+                        <div className="space-x-2">
+                            <div className="relative w-full h-[250px] flex flex-col items-center justify-center">
+                                <Image
+                                    src={service.image}
+                                    alt={service.name}
+                                    style={{
+                                        objectFit: "cover"
+                                    }}
+                                    fill
+                                    className="rounded-2xl" />
                             </div>
-                            <Button
-                                variant="outline"
-                                size="icon"
-                                className="h-8 w-8 shrink-0 rounded-full"
-                                disabled={true}
-                            >
-                                <Plus />
-                                <span className="sr-only">Increase</span>
-                            </Button>
-                        </div>
-                        <div className="mt-3 h-[120px]">
+
+                            <p className="pt-5 whitespace-pre-line text-sm flex flex-col justify-between">
+                                {service.description}
+                            </p>
                         </div>
                     </div>
                     <DrawerFooter>
-                        <Button>Submit</Button>
+                        <Button className="font-bold uppercase">Solicitar orçamento</Button>
                         <DrawerClose asChild>
-                            <Button variant="outline">Sair</Button>
+                            <Button className="uppercase" variant="outline">Voltar</Button>
                         </DrawerClose>
                     </DrawerFooter>
                 </div>

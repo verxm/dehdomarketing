@@ -28,7 +28,7 @@ const ServiceItem = ({ service }: ServiceItemParameters) => {
                 </p>
             </CardContent>
             <CardFooter className="flex justify-end p-5 pt-1">
-                <ServiceDetail />
+                <ServiceDetail service={service}/>
             </CardFooter>
         </Card>
     );

@@ -23,7 +23,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
             </DrawerTrigger>
             <DrawerContent>
                 <div className="mx-auto w-full max-w-sm">
-                    <DrawerHeader>
+                    <DrawerHeader className="pt-1">
                         <DrawerTitle>{service.name}</DrawerTitle>
                     </DrawerHeader>
                     <div className="p-2 pb-0">
@@ -39,7 +39,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                                     className="rounded-2xl" />
                             </div>
 
-                            <p className="pt-5 whitespace-pre-line text-sm flex flex-col justify-between">
+                            <p className="max-h-[200px] overflow-auto mt-5 whitespace-pre-line text-sm flex flex-col justify-between">
                                 {service.description}
                             </p>
                         </div>

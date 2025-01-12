@@ -14,7 +14,7 @@ const ServicesSession = () => {
             <div className="flex px-5 gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
                 {services.map((service) => (
                     <div key={service.id} className="min-w-[350px] max-w-[350px]">
-                        <ServiceItem name={service.name} description={service.description} imagePath={service.image} />
+                        <ServiceItem service={service} />
                     </div>
                 ))}
             </div>

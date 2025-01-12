@@ -1,4 +1,4 @@
-import { Service } from "@/entities/service"
+import { Service } from "@/app/_entities/service"
 
 const allServices = [
     {

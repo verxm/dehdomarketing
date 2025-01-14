@@ -7,6 +7,11 @@ const FeedbackSession = () => {
 
     return (
         <>
+            <div className="px-5 mb-3 flex flex-col items-center">
+                <h2 className="text-lg uppercase text-gray-700 font-bold">✨ Feedbacks ✨</h2>
+                <p className="text-sm text-muted-foreground">De quem já vivieu essa transformação</p>
+            </div>
+
             <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
                 <Marquee pauseOnHover className="[--duration:60s]">
                     {allFeedbacks.map((feedback) => (

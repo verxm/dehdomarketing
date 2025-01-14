@@ -24,7 +24,9 @@ export default function Home() {
         <ServicesSession />
       </div>
 
-      <div className="pt-2">
+      <Separator className="mt-12" />
+
+      <div className="pt-8 pb-5">
         <FeedbackSession />
       </div>
     </>

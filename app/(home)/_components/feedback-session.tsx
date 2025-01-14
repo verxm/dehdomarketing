@@ -1,13 +1,15 @@
+import { feedbacksRepository } from "@/app/_repositories/feedbacks-local-repository";
 import FeedbackItem from "./feedback-item";
-import { Feedback } from "@/app/_entities/feedback";
 
-interface FeedbackSessionParameters {
-    feedback: Feedback
-}
+const FeedbackSession = () => {
+    const allFeedbacks = feedbacksRepository.getAll();
 
-const FeedbackSession = ({ feedback }: FeedbackSessionParameters) => {
     return (
-        <FeedbackItem feedback={feedback} />
+        <>
+            {allFeedbacks.map((feedback) => (
+                <FeedbackItem feedback={feedback} />
+            ))}
+        </>
     );
 }
 

@@ -24,7 +24,7 @@ export default function Home() {
         <ServicesSession />
       </div>
 
-      <div className="p-5">
+      <div className="pt-2">
         <FeedbackSession />
       </div>
     </>

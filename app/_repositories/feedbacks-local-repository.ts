@@ -20,14 +20,14 @@ const allFeedbacks = [
         author: "Patrícia Kroth",
         authorImage: "/perfil-patricia-instituto-derma.jpeg",
         authorPosition: "Proprietária - Instituto Derma",
-        testimony: "Profissional maravilhosa! Super dedicada, extremamente competente. Só sinto não ter conhecido Débora antes!\nAdoro seu trabalho",
+        testimony: "Profissional maravilhosa! Super dedicada, extremamente competente. Só sinto não ter conhecido Débora antes!\n\nAdoro seu trabalho",
       },
       {
         id: "4",
         author: "Andréa Romera",
         authorImage: "/perfil-andrea-massoterapeuta.jpeg",
         authorPosition: "Massoterapeuta",
-        testimony: "Debora, tenho que te agradecer pelo excelente trabalho que está fazendo no meu Instagram.\nGuriaaaa...\nO reels que tu gravou comigo deu mais de 2k visualizações, para o meu primeiro reels está maravilhoso.\nObrigada pelas ideias e pelas dicas de story que tu está me dando.\nEstou muito grataAdoro seu trabalho",
+        testimony: "Debora, tenho que te agradecer pelo excelente trabalho que está fazendo no meu Instagram.\nGuriaaaa...\n\nO reels que tu gravou comigo deu mais de 2k visualizações, para o meu primeiro reels está maravilhoso.\nObrigada pelas ideias e pelas dicas de story que tu está me dando.\nEstou muito grata!\n\nAdoro seu trabalho",
       },
       {
         id: "5",

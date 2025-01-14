@@ -9,8 +9,8 @@ interface FeedbackItemParameters {
 
 const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
     return (
-        <div key={feedback.id} className="cursor-pointer">
-            <Card className="hover:bg-gray-950/[.05]">
+        <div key={feedback.id} className="cursor-pointer h-full">
+            <Card className="hover:bg-gray-950/[.05] h-full">
                 <CardHeader className="pt-4">
                     <div className="flex flex-row items-center gap-3">
                         <Avatar>

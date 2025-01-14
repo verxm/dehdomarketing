@@ -3,6 +3,7 @@ import PresentationSession from "./_components/presentation-session";
 import Contacts from "@/app/(home)/_components/contacts";
 import ServicesSession from "./_components/services-session";
 import { Separator } from "@/components/ui/separator";
+import FeedbackSession from "./_components/feedback-session";
 
 export default function Home() {
   return (
@@ -17,10 +18,16 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator className="mt-10"/>
+      <Separator className="mt-10" />
 
-      <div className="mt-10 mb-[4.5rem]">
+      <div className="mt-10">
         <ServicesSession />
+      </div>
+
+      <Separator className="mt-12" />
+
+      <div className="pt-8 pb-5">
+        <FeedbackSession />
       </div>
     </>
   );

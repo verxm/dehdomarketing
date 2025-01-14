@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const FeedbackSession = () => {
     return (
@@ -19,7 +20,9 @@ const FeedbackSession = () => {
                         </div>
                     </div>
                 </CardHeader>
+                <Separator className="mt-[-12px] mb-3" />
                 <CardContent>
+
                     <p className="italic text-sm">"Queria vir te dizer que estou muito feliz com os nossos resultados esse mês, conseguimos, conseguimos aumentar muito a visibilidade da página.. até levei um susto kkk
                         Débora eu sou muito grata por todo teu empenho e dedicação por fazer a minha marca aparecer e crescer, sou grata por tudo pois sei que essa dedicação além de ser algo profissional, criamos uma conexão de parceria e muita sintonia (hoje eu entendo q o marketing é isso) te agrade muito por tanto."</p>
                 </CardContent>

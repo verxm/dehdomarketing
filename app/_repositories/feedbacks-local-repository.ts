@@ -36,6 +36,13 @@ const allFeedbacks = [
         authorPosition: "Esteta Cosmetóloga",
         testimony: "Débora, você  é top e suas dicas são reais, muitas pessoas vende algo que não é real e quando isso vai de contro nossa realidade profissional frusta, mas tu inspira muito, baita profissional e empodera muitas, com esse coração!",
       },
+      {
+        id: "6",
+        author: "Kauany Koch",
+        authorImage: "/perfil-kauany-esteta.jpeg",
+        authorPosition: "Esteta Cosmetóloga",
+        testimony: "Oi Débora. Gostaria de te agradecer por todo auxílio que está me dando! As tuas dicas de mensagens está me ajudando muito e estou conseguindo fechar melhor as vendas",
+      },
 ] as Feedback[]
 
 export const feedbacksRepository = {

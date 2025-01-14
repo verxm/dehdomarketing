@@ -8,7 +8,7 @@ interface FeedbackSessionParameters {
 
 const FeedbackSession = ({ feedback }: FeedbackSessionParameters) => {
     return (
-        <div className="cursor-pointer">
+        <div key={feedback.id} className="cursor-pointer">
             <Card className="hover:bg-gray-950/[.05]">
                 <CardHeader className="pt-4">
                     <div className="flex flex-row items-center gap-3">
@@ -27,7 +27,7 @@ const FeedbackSession = ({ feedback }: FeedbackSessionParameters) => {
                 <Separator className="mt-[-13px] mb-4" />
                 <CardContent>
 
-                    <p className="italic text-xs whitespace-pre-line">{feedback.testimony}"</p>
+                    <p className="italic text-xs whitespace-pre-line">"{feedback.testimony}"</p>
                 </CardContent>
             </Card>
         </div>

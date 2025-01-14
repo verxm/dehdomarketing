@@ -3,8 +3,12 @@ import PresentationSession from "./_components/presentation-session";
 import Contacts from "@/app/(home)/_components/contacts";
 import ServicesSession from "./_components/services-session";
 import { Separator } from "@/components/ui/separator";
+import FeedbackSession from "./_components/feedback-session";
+import { feedbacksRepository } from "../_repositories/feedbacks-local-repository";
 
 export default function Home() {
+  const allFeedbacks = feedbacksRepository.getAll();
+
   return (
     <>
       <Header />
@@ -17,10 +21,16 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator className="mt-10"/>
+      <Separator className="mt-10" />
 
-      <div className="mt-10 mb-[4.5rem]">
+      <div className="mt-10">
         <ServicesSession />
+      </div>
+
+      <div className="p-5">
+        {allFeedbacks.map((feedback) => (
+          <FeedbackSession feedback={feedback} />
+        ))}
       </div>
     </>
   );

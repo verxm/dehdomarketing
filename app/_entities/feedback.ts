@@ -1,4 +1,4 @@
-interface Feedback {
+export interface Feedback {
     id: string,
     author: string,
     authorImage: string,

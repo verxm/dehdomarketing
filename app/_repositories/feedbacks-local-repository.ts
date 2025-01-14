@@ -1,3 +1,5 @@
+import { Feedback } from "../_entities/feedback";
+
 const allFeedbacks = [
     {
         id: "1",

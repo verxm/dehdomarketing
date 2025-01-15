@@ -36,7 +36,7 @@ const InstagramInsights = ({
     return (
         <>
             <div className="flex flex-row justify-between">
-                <p className="font-bold text-sm">Insigths</p>
+                <p className="font-bold text-sm text-gray-500">Insigths</p>
                 <Popover >
                     <PopoverTrigger asChild>
                     <InsigthsBadge />

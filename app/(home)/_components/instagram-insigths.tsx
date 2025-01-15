@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface InstagramInsightsParameters {
     insigthsDateRange: string,
@@ -38,7 +37,6 @@ const InstagramInsights = ({
         <>
             <div className="flex flex-row justify-between">
                 <p className="font-bold text-sm">Insigths</p>
-                {/* <p className="text-xs italic text-gray-600 pt-[3px]">{insigthsDateRange}</p> */}
                 <Popover >
                     <PopoverTrigger asChild>
                     <InsigthsBadge />

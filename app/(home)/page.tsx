@@ -4,6 +4,7 @@ import Contacts from "@/app/(home)/_components/contacts";
 import ServicesSession from "./_components/services-session";
 import { Separator } from "@/components/ui/separator";
 import FeedbackSession from "./_components/feedback-session";
+import CustomersSession from "./_components/customers-session";
 
 export default function Home() {
   return (
@@ -28,6 +29,10 @@ export default function Home() {
 
       <div className="pt-8 pb-5">
         <FeedbackSession />
+      </div>
+
+      <div className="p-5">
+        <CustomersSession />
       </div>
     </>
   );

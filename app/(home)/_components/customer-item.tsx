@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import InstagramInsights from "./instagram-insigths";
 
@@ -22,7 +21,6 @@ const CustomerItem = () => {
                         <h3 className="font-bold">Derma Locações</h3>
                         <p className="text-sm text-gray-500">Locações de equipamentos estéticos</p>
                     </div>
-                    {/* <Separator /> */}
                     <div className="px-5 pt-5">
                         <InstagramInsights />
                     </div>

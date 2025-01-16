@@ -17,14 +17,6 @@ const InstagramInsights = ({
     totalFollowers,
     sharedContents,
     isBefore = false }: InstagramInsightsParameters) => {
-    const InsigthsBadge = () => {
-        if (isBefore) {
-            return <Badge variant="secondary" className="text-primary">Antes</Badge>
-        }
-
-        return <Badge>Depois</Badge>
-    }
-
     const InsigthPopoverStyle = () => {
         if (isBefore) {
             return "bg-muted text-primary"
@@ -36,13 +28,13 @@ const InstagramInsights = ({
     return (
         <>
             <div className="flex flex-row justify-between">
-                <p className="font-bold text-sm text-gray-500">Insigths</p>
+                <p className="font-bold text-sm text-gray-600">Insigths</p>
                 <Popover >
                     <PopoverTrigger asChild>
-                    <InsigthsBadge />
+                        <InsigthsBadge className="cursor-pointer" isBefore={isBefore} />
                     </PopoverTrigger>
-                    <PopoverContent className= {`w-full h-7 p-0 px-2 items-center justify-center flex flex-col ${InsigthPopoverStyle()}`}  >
-                    <p className="text-xs">{insigthsDateRange}</p>
+                    <PopoverContent className={`w-full h-7 p-0 px-2 items-center justify-center flex flex-col ${InsigthPopoverStyle()}`}  >
+                        <p className="text-xs">{insigthsDateRange}</p>
                     </PopoverContent>
                 </Popover>
 
@@ -66,3 +58,16 @@ const InstagramInsights = ({
 }
 
 export default InstagramInsights;
+
+interface InsigthsBadgeParameters {
+    className: string,
+    isBefore?: boolean | undefined,
+}
+
+const InsigthsBadge = ({ className, isBefore }: InsigthsBadgeParameters) => {
+    if (isBefore) {
+        return <Badge variant="secondary" className={`text-primary ${className}`}>Antes</Badge>
+    }
+
+    return <Badge className={className}>Depois</Badge>
+}

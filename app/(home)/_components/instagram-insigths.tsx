@@ -1,21 +1,14 @@
+import { InstagramInsight } from "@/app/_entities/instagram-insights";
 import { Badge } from "@/components/ui/badge";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 interface InstagramInsightsParameters {
-    insigthsDateRange: string,
-    accountsReached: string,
-    accountsWithEngagement: string,
-    totalFollowers: string,
-    sharedContents: string,
+    insights: InstagramInsight
     isBefore?: boolean | undefined,
 }
 
 const InstagramInsights = ({
-    insigthsDateRange,
-    accountsReached,
-    accountsWithEngagement,
-    totalFollowers,
-    sharedContents,
+    insights,
     isBefore = false }: InstagramInsightsParameters) => {
     const InsigthPopoverStyle = () => {
         if (isBefore) {
@@ -34,7 +27,7 @@ const InstagramInsights = ({
                         <InsigthsBadge className="cursor-pointer" isBefore={isBefore} />
                     </PopoverTrigger>
                     <PopoverContent className={`w-full h-7 p-0 px-2 items-center justify-center flex flex-col ${InsigthPopoverStyle()}`}  >
-                        <p className="text-xs">{insigthsDateRange}</p>
+                        <p className="text-xs">{insights.dateRange}</p>
                     </PopoverContent>
                 </Popover>
 
@@ -47,10 +40,10 @@ const InstagramInsights = ({
                     <p>Conteúdo que você compartilhou:</p>
                 </div>
                 <div className="flex flex-col text-sm">
-                    <p>{accountsReached}</p>
-                    <p>{accountsWithEngagement}</p>
-                    <p>{totalFollowers}</p>
-                    <p>{sharedContents}</p>
+                    <p>{insights.accountsReached}</p>
+                    <p>{insights.accountsWithEngagement}</p>
+                    <p>{insights.totalFollowers}</p>
+                    <p>{insights.sharedContents}</p>
                 </div>
             </div>
         </>

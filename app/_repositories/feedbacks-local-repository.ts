@@ -3,7 +3,7 @@ import { Feedback } from "../_entities/feedback";
 const allFeedbacks = [
     {
         id: "1",
-        author: "Gabriela Torres",
+        author: "Dra. Gabriela Torres",
         authorImage: "/perfil-gabi-gt-clinic.jpeg",
         authorPosition: "Proprietária - GT Clinic",
         testimony: "Queria vir te dizer que estou muito feliz com os nossos resultados esse mês, conseguimos, conseguimos aumentar muito a visibilidade da página.. até levei um susto kkk \n\nDébora eu sou muito grata por todo teu empenho e dedicação por fazer a minha marca aparecer e crescer, sou grata por tudo pois sei que essa dedicação além de ser algo profissional, criamos uma conexão de parceria e muita sintonia (hoje eu entendo q o marketing é isso) te agrade muito por tanto.",
@@ -17,7 +17,7 @@ const allFeedbacks = [
       },
       {
         id: "3",
-        author: "Patrícia Kroth",
+        author: "Dra. Patrícia Kroth",
         authorImage: "/perfil-patricia-instituto-derma.jpeg",
         authorPosition: "Proprietária - Instituto Derma",
         testimony: "Profissional maravilhosa! Super dedicada, extremamente competente. Só sinto não ter conhecido Débora antes!\n\nAdoro seu trabalho",

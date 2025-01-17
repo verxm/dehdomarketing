@@ -3,6 +3,7 @@ import Image from "next/image";
 import InstagramInsights from "./instagram-insigths";
 import { Compare } from "@/components/ui/compare";
 import { Customer } from "@/app/_entities/customer";
+import CustomerPersonalComment from "./customer-personal-comment";
 
 interface CustomerItemParameters {
     customer: Customer
@@ -25,7 +26,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                     </div>
                     <div className="pt-24 px-5 pb-7 border-b border-primary/50">
                         <h3 className="font-bold text-gray-600">{customer.name}</h3>
-                        <p className="text-sm text-gray-600 whitespace-pre-line">{customer.description}</p>
+                        <CustomerPersonalComment comment={customer.description}/>
                     </div>
                     <div className="px-5 pt-5 border-b border-dashed border-primary/50">
                         <InstagramInsights

@@ -24,9 +24,17 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             src={customer.logoPath}
                             alt={customer.name} height={180} width={180} />
                     </div>
-                    <div className="pt-24 px-5 pb-7 border-b border-primary/50">
-                        <h3 className="font-bold text-gray-600">{customer.name}</h3>
-                        <CustomerPersonalComment comment={customer.description}/>
+                    <div className="
+                        flex flex-col items-center gap-4
+                        pt-20 px-5 pb-7 
+                        border-b border-primary/50">
+                        <a
+                            className="text-primary font-bold"
+                            href={`https://www.instagram.com/${customer.instagramIdentifier}`}
+                            target="_blank">
+                            @{customer.instagramIdentifier}
+                        </a>
+                        <CustomerPersonalComment comment={customer.description} />
                     </div>
                     <div className="px-5 pt-5 border-b border-dashed border-primary/50">
                         <InstagramInsights
@@ -51,17 +59,6 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                                 autoplay={true}
                             />
                         </div>
-
-                    </div>
-                    <div className="flex flex-row justify-end p-2">
-                        <p className="text-xs text-gray-400">Acompanhe:{" "}
-                            <a 
-                                className="text-primary/80 underline" 
-                                href={`https://www.instagram.com/${customer.instagramIdentifier}`}
-                                target="_blank">
-                                    @{customer.instagramIdentifier}
-                            </a>
-                        </p>
                     </div>
                 </div>
             </CardContent>

@@ -1,26 +1,82 @@
+"use client"
+
 import { InstagramInsight } from "@/app/_entities/instagram-insights";
 import { Badge } from "@/components/ui/badge";
+import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 interface InstagramInsightsParameters {
-    insights: InstagramInsight
-    isBefore?: boolean | undefined,
+    beforeInsights: InstagramInsight,
+    afterInsights: InstagramInsight,
 }
 
 const InstagramInsights = ({
-    insights,
-    isBefore = false }: InstagramInsightsParameters) => {
-    const InsigthPopoverStyle = () => {
-        if (isBefore) {
-            return "bg-muted text-primary"
-        }
+    beforeInsights,
+    afterInsights }: InstagramInsightsParameters) => {
+    const chartData = [
+        {
+            metric: "Alcance",
+            before: beforeInsights.accountsReached,
+            after: afterInsights.accountsReached
+        },
+        {
+            metric: "Enganjamento",
+            before: beforeInsights.accountsWithEngagement,
+            after: afterInsights.accountsWithEngagement
+        },
+        {
+            metric: "Seguidores",
+            before: beforeInsights.totalFollowers,
+            after: afterInsights.totalFollowers
+        },
+        {
+            metric: "Compartilhamentos",
+            before: beforeInsights.sharedContents,
+            after: afterInsights.sharedContents
+        },
+    ]
 
-        return "bg-primary text-white";
-    }
+    const chartConfig = {
+        before: {
+            label: "Antes",
+            color: "#F6E7D8",
+        },
+        after: {
+            label: "Depois",
+            color: "#9B5B2A",
+        },
+    } satisfies ChartConfig
 
     return (
         <>
-            <div className="flex flex-row justify-between">
+            <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+                <BarChart accessibilityLayer data={chartData}>
+                    <CartesianGrid vertical={false} />
+                    <XAxis
+                        className="text-xxs text-nowrap text-ellipsis"
+                        dataKey="metric"
+                        tickLine={false}
+                        tickMargin={10}
+                        axisLine={false}
+                        tickFormatter={(value) => `${value}`
+                        }
+                    />
+                    <YAxis
+                        className="text-xxs"
+                        tickLine={false}
+                        tickMargin={10}
+                        axisLine={false}
+                        allowDataOverflow={true}
+                    />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <ChartLegend className="text-xs" content={<ChartLegendContent />} />
+                    <Bar dataKey="before" fill="var(--color-before)" radius={4} />
+                    <Bar dataKey="after" fill="var(--color-after)" radius={4} />
+                </BarChart>
+            </ChartContainer>
+
+            {/* <div className="flex flex-row justify-between">
                 <p className="font-bold text-sm text-gray-600">Insigths</p>
                 <Popover >
                     <PopoverTrigger asChild>
@@ -45,7 +101,7 @@ const InstagramInsights = ({
                     <p>{insights.totalFollowers}</p>
                     <p>{insights.sharedContents}</p>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 }

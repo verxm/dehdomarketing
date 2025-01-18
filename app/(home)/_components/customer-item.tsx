@@ -38,12 +38,8 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                     </div>
                     <div className="px-5 pt-5 border-b border-dashed border-primary/50">
                         <InstagramInsights
-                            insights={customer.beforeInstagramInsights}
-                            isBefore={true} />
-                    </div>
-                    <div className="px-5 pt-5 pb-2 border-b border-primary/50 ">
-                        <InstagramInsights
-                            insights={customer.afterInstagramInsights} />
+                            beforeInsights={customer.beforeInstagramInsights}
+                            afterInsights={customer.afterInstagramInsights} />
                     </div>
 
                     <div className=" flex flex-col items-center justify-center pr-3 py-6">

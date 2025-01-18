@@ -8,7 +8,7 @@ const CustomersSession = () => {
         <>
             {
                 allCustomers.map((customer) => (
-                    <CustomerItem customer={customer} />
+                    <CustomerItem key={customer.id} customer={customer} />
                 ))
             }
         </>

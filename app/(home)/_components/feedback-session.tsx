@@ -13,14 +13,14 @@ const FeedbackSession = () => {
             </div>
 
             <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                <Marquee pauseOnHover className="[--duration:60s]">
+                <Marquee key="marquee-1" pauseOnHover className="[--duration:60s]">
                     {allFeedbacks.map((feedback) => (
-                        <FeedbackItem feedback={feedback} />
+                        <FeedbackItem key={feedback.id} feedback={feedback} />
                     ))}
                 </Marquee>
-                <Marquee reverse pauseOnHover className="[--duration:60s]">
+                <Marquee key="marquee-2" reverse pauseOnHover className="[--duration:60s]">
                     {allFeedbacks.map((feedback) => (
-                        <FeedbackItem feedback={feedback} />
+                        <FeedbackItem key={feedback.id} feedback={feedback} />
                     ))}
                 </Marquee>
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-white"></div>

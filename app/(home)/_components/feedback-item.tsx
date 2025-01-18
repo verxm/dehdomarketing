@@ -10,7 +10,6 @@ interface FeedbackItemParameters {
 const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
     return (
         <div 
-            key={feedback.id} 
             className="
                 max-w-[390px] h-[320px] 
                 md:max-w-[550px] md:h-[270px]

@@ -3,7 +3,6 @@
 import { InstagramInsight } from "@/app/_entities/instagram-insights";
 import { Badge } from "@/components/ui/badge";
 import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 interface InstagramInsightsParameters {
@@ -75,33 +74,6 @@ const InstagramInsights = ({
                     <Bar dataKey="after" fill="var(--color-after)" radius={4} />
                 </BarChart>
             </ChartContainer>
-
-            {/* <div className="flex flex-row justify-between">
-                <p className="font-bold text-sm text-gray-600">Insigths</p>
-                <Popover >
-                    <PopoverTrigger asChild>
-                        <InsigthsBadge className="cursor-pointer" isBefore={isBefore} />
-                    </PopoverTrigger>
-                    <PopoverContent className={`w-full h-7 p-0 px-2 items-center justify-center flex flex-col ${InsigthPopoverStyle()}`}  >
-                        <p className="text-xs">{insights.dateRange}</p>
-                    </PopoverContent>
-                </Popover>
-
-            </div>
-            <div className="flex flex-row justify-between p-4">
-                <div className="flex flex-col text-sm">
-                    <p>Contas alcançadas:</p>
-                    <p>Contas com engajamento:</p>
-                    <p>Total de seguidores:</p>
-                    <p>Conteúdo que você compartilhou:</p>
-                </div>
-                <div className="flex flex-col text-sm">
-                    <p>{insights.accountsReached}</p>
-                    <p>{insights.accountsWithEngagement}</p>
-                    <p>{insights.totalFollowers}</p>
-                    <p>{insights.sharedContents}</p>
-                </div>
-            </div> */}
         </>
     );
 }

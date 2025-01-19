@@ -54,7 +54,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             pt-7 pb-4 
                             border-t border-dashed border-primary/50">
                         <div className="flex flex-row justify-center gap-1">
-                            <BsInstagram className="text-sm text-gray-500 mt-1"/>
+                            <BsInstagram className="text-sm text-gray-500 mt-1" />
                             <h3 className="font-bold pb-5 text-gray-500">Evolução das métricas</h3>
                         </div>
                         <InstagramInsights

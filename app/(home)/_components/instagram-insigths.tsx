@@ -10,8 +10,6 @@ interface InstagramInsightsParameters {
     afterInsights: InstagramInsight,
 }
 
-const beforeColor = "#F6E7D8";
-
 const InstagramInsights = ({
     beforeInsights,
     afterInsights }: InstagramInsightsParameters) => {
@@ -41,7 +39,7 @@ const InstagramInsights = ({
     const chartConfig = {
         before: {
             label: "Antes",
-            color: beforeColor,
+            color: "#F6E7D8",
         },
         after: {
             label: "Depois",

@@ -10,6 +10,8 @@ interface InstagramInsightsParameters {
     afterInsights: InstagramInsight,
 }
 
+const beforeColor = "#F6E7D8";
+
 const InstagramInsights = ({
     beforeInsights,
     afterInsights }: InstagramInsightsParameters) => {
@@ -39,7 +41,7 @@ const InstagramInsights = ({
     const chartConfig = {
         before: {
             label: "Antes",
-            color: "#F6E7D8",
+            color: beforeColor,
         },
         after: {
             label: "Depois",
@@ -48,7 +50,11 @@ const InstagramInsights = ({
     } satisfies ChartConfig
 
     return (
-        <>
+        <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-row gap-3 text-xs text-gray-400 italic justify-center">
+                <p>Antes: {beforeInsights.dateRange}</p>
+                <p>Depois: {beforeInsights.dateRange}</p>
+            </div>
             <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
                 <BarChart accessibilityLayer data={chartData}>
                     <CartesianGrid vertical={false} />
@@ -69,12 +75,12 @@ const InstagramInsights = ({
                         allowDataOverflow={true}
                     />
                     <ChartTooltip content={<ChartTooltipContent />} />
-                    <ChartLegend className="text-xs" content={<ChartLegendContent />} />
+                    <ChartLegend content={<ChartLegendContent />} />
                     <Bar dataKey="before" fill="var(--color-before)" radius={4} />
                     <Bar dataKey="after" fill="var(--color-after)" radius={4} />
                 </BarChart>
             </ChartContainer>
-        </>
+        </div>
     );
 }
 

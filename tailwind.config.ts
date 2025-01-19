@@ -14,7 +14,7 @@ const config: Config = {
 	theme: {
     	extend: {
 			fontSize: {
-				'xxs': '0.50rem',
+				'xxs': '0.60rem',
 			},
     		colors: {
     			background: 'hsl(var(--background))',

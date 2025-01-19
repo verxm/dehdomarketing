@@ -32,7 +32,7 @@ const InstagramInsights = ({
             after: afterInsights.totalFollowers
         },
         {
-            metric: "Compartilhamentos",
+            metric: "Posts",
             before: beforeInsights.sharedContents,
             after: afterInsights.sharedContents
         },
@@ -51,11 +51,14 @@ const InstagramInsights = ({
 
     return (
         <div className="flex flex-col items-center gap-2">
-            <div className="flex flex-row gap-3 text-xs text-gray-400 italic justify-center">
+            <div className="
+                flex flex-row gap-3 
+                text-xxs text-gray-500 italic text-nowrap
+                justify-center">
                 <p>Antes: {beforeInsights.dateRange}</p>
                 <p>Depois: {beforeInsights.dateRange}</p>
             </div>
-            <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+            <ChartContainer config={chartConfig} className="min-h-[200px] w-full ml-[-20px]">
                 <BarChart accessibilityLayer data={chartData}>
                     <CartesianGrid vertical={false} />
                     <XAxis

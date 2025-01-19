@@ -4,6 +4,7 @@ import InstagramInsights from "./instagram-insigths";
 import { Compare } from "@/components/ui/compare";
 import { Customer } from "@/app/_entities/customer";
 import CustomerPersonalComment from "./customer-personal-comment";
+import { BsInstagram } from "react-icons/bs";
 
 interface CustomerItemParameters {
     customer: Customer
@@ -26,8 +27,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                     </div>
                     <div className="
                         flex flex-col items-center gap-4
-                        pt-20 px-5 pb-7 
-                        border-b border-primary/50">
+                        pt-20 px-5 pb-5">
                         <a
                             className="text-primary font-bold"
                             href={`https://www.instagram.com/${customer.instagramIdentifier}`}
@@ -36,12 +36,6 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                         </a>
                         <CustomerPersonalComment comment={customer.description} />
                     </div>
-                    <div className="px-5 pt-5 border-b border-dashed border-primary/50">
-                        <InstagramInsights
-                            beforeInsights={customer.beforeInstagramInsights}
-                            afterInsights={customer.afterInstagramInsights} />
-                    </div>
-
                     <div className=" flex flex-col items-center justify-center pr-3 py-6">
                         <h3 className="font-bold pb-5 text-gray-500">Transformação do perfil</h3>
                         <div className="h-[600px] w-[300px]">
@@ -55,6 +49,17 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                                 autoplay={true}
                             />
                         </div>
+                    </div>
+                    <div className="
+                            pt-7 pb-4 
+                            border-t border-dashed border-primary/50">
+                        <div className="flex flex-row justify-center gap-1">
+                            <BsInstagram className="text-sm text-gray-500 mt-1"/>
+                            <h3 className="font-bold pb-5 text-gray-500">Evolução das métricas</h3>
+                        </div>
+                        <InstagramInsights
+                            beforeInsights={customer.beforeInstagramInsights}
+                            afterInsights={customer.afterInstagramInsights} />
                     </div>
                 </div>
             </CardContent>

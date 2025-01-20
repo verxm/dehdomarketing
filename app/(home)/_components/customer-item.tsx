@@ -4,7 +4,7 @@ import InstagramInsights from "./instagram-insigths";
 import { Compare } from "@/components/ui/compare";
 import { Customer } from "@/app/_entities/customer";
 import CustomerPersonalComment from "./customer-personal-comment";
-import { BsInstagram } from "react-icons/bs";
+import { BsBarChartLine, BsInstagram } from "react-icons/bs";
 
 interface CustomerItemParameters {
     customer: Customer
@@ -46,13 +46,13 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             </div>
 
                             <div className="
-                            pt-8 mt-4 pb-4 
-                            border-t border-b border-dashed border-primary/50
-                            md:pt-4
-                            md:border-none">
+                                pt-8 mt-4 pb-4 
+                                border-t border-b border-dashed border-primary/50
+                                md:pt-4
+                                md:border-none">
                                 <div className="flex flex-row justify-center gap-1">
-                                    <BsInstagram className="text-sm text-gray-500 mt-1" />
                                     <h3 className="font-bold pb-5 text-gray-500">Evolução das métricas</h3>
+                                    <BsBarChartLine className="text-sm text-gray-500 mt-1" />
                                 </div>
                                 <InstagramInsights
                                     beforeInsights={customer.beforeInstagramInsights}
@@ -61,10 +61,14 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <h3 className="
+                            <div className="flex flex-row items-center gap-1">
+                                <h3 className="
                                 font-bold text-gray-500
                                 pt-9 pb-5
                                 md:pt-0">Transformação do perfil</h3>
+                                <BsInstagram className="text-sm text-gray-500 mt-4" />
+                            </div>
+
                             <div className="
                                 h-[600px] w-[300px] 
                                 md:w-[310px] md:h-[600px]

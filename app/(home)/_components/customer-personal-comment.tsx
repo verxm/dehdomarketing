@@ -19,7 +19,7 @@ const CustomerPersonalComment = ({ comment }: CustomerPersonalCommentParameters)
                 <AlertTitle className="italic">~ Deh</AlertTitle>
             </div>
 
-            <AlertDescription className="italic h-[150px] overflow-y-scroll whitespace-pre-line">
+            <AlertDescription className="italic h-[150px] overflow-y-auto whitespace-pre-line">
                 "{comment}"
             </AlertDescription>
             <div className="flex flex-row justify-end pb-3">

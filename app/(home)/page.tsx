@@ -27,11 +27,11 @@ export default function Home() {
 
       <Separator className="mt-12" />
 
-      <div className="pt-8 pb-5">
+      <div className="pt-10 pb-5">
         <FeedbackSession />
       </div>
       <div className="p-5 lg:px-20
-        2xl:flex 2xl:justify-center">
+        2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
         <CustomersSession />
       </div>
     </>

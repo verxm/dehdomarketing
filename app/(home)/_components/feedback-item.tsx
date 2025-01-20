@@ -10,7 +10,6 @@ interface FeedbackItemParameters {
 const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
     return (
         <div 
-            key={feedback.id} 
             className="
                 max-w-[390px] h-[320px] 
                 md:max-w-[550px] md:h-[270px]
@@ -27,7 +26,7 @@ const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
 
                         <div className="flex flex-col">
                             <p className="text-sm font-bold italic">{feedback.author}</p>
-                            <p className="text-xs text-gray-400 ital">{feedback.authorPosition}</p>
+                            <p className="text-xs text-gray-400">{feedback.authorPosition}</p>
                         </div>
                     </div>
                 </CardHeader>

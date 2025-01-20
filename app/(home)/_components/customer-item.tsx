@@ -25,20 +25,19 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             src={customer.logoPath}
                             alt={customer.name} height={180} width={180} />
                     </div>
-                    <div className="
-                        flex flex-col items-center gap-4
-                        pt-20 px-5 pb-5">
+                    <div className="flex flex-col items-center pt-20">
                         <a
                             className="text-primary font-bold"
                             href={`https://www.instagram.com/${customer.instagramIdentifier}`}
                             target="_blank">
                             @{customer.instagramIdentifier}
                         </a>
-                        <CustomerPersonalComment comment={customer.description} />
                     </div>
-                    <div className=" flex flex-col items-center justify-center pr-3 py-6">
-                        <h3 className="font-bold pb-5 text-gray-500">Transformação do perfil</h3>
-                        <div className="h-[600px] w-[300px]">
+                    <div className="flex flex-col items-center justify-center px-4 py-7">
+                        <CustomerPersonalComment comment={customer.description} />
+                        
+                        <h3 className="font-bold pt-9 pb-5 text-gray-500">Transformação do perfil</h3>
+                        <div className="h-[600px] w-[300px] mr-3">
                             <Compare
                                 firstImage={customer.beforeInstagramInsights.profileImagePath}
                                 secondImage={customer.afterInstagramInsights.profileImagePath}
@@ -51,7 +50,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                         </div>
                     </div>
                     <div className="
-                            pt-7 pb-4 
+                            pt-8 pb-4 
                             border-t border-dashed border-primary/50">
                         <div className="flex flex-row justify-center gap-1">
                             <BsInstagram className="text-sm text-gray-500 mt-1" />

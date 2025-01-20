@@ -61,12 +61,12 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <div className="flex flex-row items-center gap-1">
+                            <div className="flex flex-row items-center md:items-start gap-1">
                                 <h3 className="
                                 font-bold text-gray-500
                                 pt-9 pb-5
                                 md:pt-0">Transformação do perfil</h3>
-                                <BsInstagram className="text-sm text-gray-500 mt-4" />
+                                <BsInstagram className="text-sm text-gray-500 mt-4 md:mt-1" />
                             </div>
 
                             <div className="

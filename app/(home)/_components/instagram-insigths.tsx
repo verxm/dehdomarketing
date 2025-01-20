@@ -1,7 +1,6 @@
 "use client"
 
 import { InstagramInsight } from "@/app/_entities/instagram-insights";
-import { Badge } from "@/components/ui/badge";
 import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
@@ -89,16 +88,3 @@ const InstagramInsights = ({
 }
 
 export default InstagramInsights;
-
-interface InsigthsBadgeParameters {
-    className: string,
-    isBefore?: boolean | undefined,
-}
-
-const InsigthsBadge = ({ className, isBefore }: InsigthsBadgeParameters) => {
-    if (isBefore) {
-        return <Badge variant="secondary" className={`text-primary ${className}`}>Antes</Badge>
-    }
-
-    return <Badge className={className}>Depois</Badge>
-}

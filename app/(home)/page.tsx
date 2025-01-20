@@ -5,8 +5,6 @@ import ServicesSession from "./_components/services-session";
 import { Separator } from "@/components/ui/separator";
 import FeedbackSession from "./_components/feedback-session";
 import CustomersSession from "./_components/customers-session";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
   return (

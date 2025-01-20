@@ -11,7 +11,11 @@ const ServicesSession = () => {
                 <p className="text-sm text-muted-foreground">Como podemos ajudar...</p>
             </div>
 
-            <div className="flex px-5 gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+            <div className="
+                flex gap-4
+                px-5
+                overflow-x-auto [&::-webkit-scrollbar]:hidden
+                2xl:justify-center">
                 {services.map((service) => (
                     <div key={service.id} className="min-w-[350px] max-w-[350px]">
                         <ServiceItem service={service} />

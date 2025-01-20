@@ -32,7 +32,7 @@ export default function Home() {
       <div className="pt-8 pb-5">
         <FeedbackSession />
       </div>
-      <div className="p-5">
+      <div className="p-5 lg:px-20">
         <CustomersSession />
       </div>
     </>

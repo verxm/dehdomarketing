@@ -56,7 +56,10 @@ const InstagramInsights = ({
                 <p>Antes: {beforeInsights.dateRange}</p>
                 <p>Depois: {beforeInsights.dateRange}</p>
             </div>
-            <ChartContainer config={chartConfig} className="min-h-[200px] w-full ml-[-20px]">
+            <ChartContainer config={chartConfig} className="
+                min-h-[100px] w-full ml-[-20px]
+                md:max-h-[230px]
+                lg:max-h-[320px]">
                 <BarChart accessibilityLayer data={chartData}>
                     <CartesianGrid vertical={false} />
                     <XAxis

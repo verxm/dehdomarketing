@@ -33,33 +33,56 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             @{customer.instagramIdentifier}
                         </a>
                     </div>
-                    <div className="flex flex-col items-center justify-center px-4 py-7">
-                        <CustomerPersonalComment comment={customer.description} />
-                        
-                        <h3 className="font-bold pt-9 pb-5 text-gray-500">Transformação do perfil</h3>
-                        <div className="h-[600px] w-[300px] mr-3">
-                            <Compare
-                                firstImage={customer.beforeInstagramInsights.profileImagePath}
-                                secondImage={customer.afterInstagramInsights.profileImagePath}
-                                firstImageClassName="object-cover object-left-top"
-                                secondImageClassname="object-cover object-left-top"
-                                className="h-full w-full"
-                                slideMode="hover"
-                                autoplay={true}
-                            />
-                        </div>
-                    </div>
                     <div className="
-                            pt-8 pb-4 
-                            border-t border-dashed border-primary/50">
-                        <div className="flex flex-row justify-center gap-1">
-                            <BsInstagram className="text-sm text-gray-500 mt-1" />
-                            <h3 className="font-bold pb-5 text-gray-500">Evolução das métricas</h3>
+                        flex flex-col items-center justify-center 
+                        py-7
+                        md:flex-row-reverse md:gap-8 md:items-start md:justify-between
+                        md:pt-7 md:px-3">
+                        <div className="
+                            md:flex md:flex-col
+                            md:pt-12 lg:pl-4">
+                            <div className="px-4 pb-5">
+                                <CustomerPersonalComment comment={customer.description} />
+                            </div>
+
+                            <div className="
+                            pt-8 mt-4 pb-4 
+                            border-t border-b border-dashed border-primary/50
+                            md:pt-4
+                            md:border-none">
+                                <div className="flex flex-row justify-center gap-1">
+                                    <BsInstagram className="text-sm text-gray-500 mt-1" />
+                                    <h3 className="font-bold pb-5 text-gray-500">Evolução das métricas</h3>
+                                </div>
+                                <InstagramInsights
+                                    beforeInsights={customer.beforeInstagramInsights}
+                                    afterInsights={customer.afterInstagramInsights} />
+                            </div>
                         </div>
-                        <InstagramInsights
-                            beforeInsights={customer.beforeInstagramInsights}
-                            afterInsights={customer.afterInstagramInsights} />
+
+                        <div className="flex flex-col items-center">
+                            <h3 className="
+                                font-bold text-gray-500
+                                pt-9 pb-5
+                                md:pt-0">Transformação do perfil</h3>
+                            <div className="
+                                h-[600px] w-[300px] 
+                                md:w-[310px] md:h-[600px]
+                                lg:w-[350px] lg:h-[680px]
+                                mr-3">
+                                <Compare
+                                    firstImage={customer.beforeInstagramInsights.profileImagePath}
+                                    secondImage={customer.afterInstagramInsights.profileImagePath}
+                                    firstImageClassName="object-cover object-left-top"
+                                    secondImageClassname="object-cover object-left-top"
+                                    className="h-full w-full"
+                                    slideMode="hover"
+                                    autoplay={true}
+                                />
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </CardContent>
         </Card>

@@ -7,7 +7,7 @@ const CustomersSession = () => {
 
     return (
         <div className="">
-            <Carousel className="w-full">
+            <Carousel className="w-full 2xl:max-w-[1500px]">
                 <CarouselContent className="pt-2">
                     {allCustomers.map((customer) => (
                         <CarouselItem key={customer.id}>

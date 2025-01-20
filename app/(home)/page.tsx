@@ -32,7 +32,8 @@ export default function Home() {
       <div className="pt-8 pb-5">
         <FeedbackSession />
       </div>
-      <div className="p-5 lg:px-20">
+      <div className="p-5 lg:px-20
+        2xl:flex 2xl:justify-center">
         <CustomersSession />
       </div>
     </>

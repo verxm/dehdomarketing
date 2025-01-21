@@ -22,7 +22,7 @@ const ServiceItem = ({ service }: ServiceItemParameters) => {
                         className="rounded-2xl" />
                 </div>
 
-                <h3 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{service.name}</h3>
+                <h3 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap text-gray-500">{service.name}</h3>
                 <p className="pl-2 pt-2 text-sm text-muted-foreground min-h-[90px] max-h-[90px] whitespace-pre-line line-clamp-4">
                     {service.description}
                 </p>

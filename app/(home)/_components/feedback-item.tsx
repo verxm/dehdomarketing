@@ -25,7 +25,7 @@ const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
                         </Avatar>
 
                         <div className="flex flex-col">
-                            <p className="text-sm font-bold italic">{feedback.author}</p>
+                            <p className="text-sm font-bold italic text-gray-500">{feedback.author}</p>
                             <p className="text-xs text-gray-400">{feedback.authorPosition}</p>
                         </div>
                     </div>

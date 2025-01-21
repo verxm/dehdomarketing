@@ -27,7 +27,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                     </div>
                     <div className="flex flex-col items-center pt-20">
                         <a
-                            className="text-primary font-bold"
+                            className="text-gray-500 font-bold"
                             href={`https://www.instagram.com/${customer.instagramIdentifier}`}
                             target="_blank">
                             @{customer.instagramIdentifier}

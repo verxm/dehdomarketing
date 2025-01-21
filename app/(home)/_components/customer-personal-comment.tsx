@@ -16,7 +16,7 @@ const CustomerPersonalComment = ({ comment }: CustomerPersonalCommentParameters)
                     <AvatarImage className="object-cover" src={dehProfileImagePath} />
                     <AvatarFallback>D</AvatarFallback>
                 </Avatar>
-                <AlertTitle className="italic">~ Deh</AlertTitle>
+                <AlertTitle className="italic text-gray-600">~ Deh</AlertTitle>
             </div>
 
             <AlertDescription className="italic h-[150px] overflow-y-auto whitespace-pre-line">

@@ -7,7 +7,7 @@ const ServicesSession = () => {
     return (
         <>
             <div className="px-5 mb-5 flex flex-col items-center">
-                <h2 className="text-lg uppercase text-gray-700 font-bold">Serviços oferecidos</h2>
+                <h2 className="text-lg uppercase text-primary font-bold">Serviços oferecidos</h2>
                 <p className="text-sm text-muted-foreground">Como podemos ajudar...</p>
             </div>
 

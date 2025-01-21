@@ -8,7 +8,7 @@ const CustomersSession = () => {
     return (
         <>
             <div className="px-5 mb-7 pt-5 flex flex-col items-center justify-center">
-                <h2 className="text-lg uppercase text-gray-700 font-bold">🚀 Resultados 🚀</h2>
+                <h2 className="text-lg uppercase text-primary font-bold">🚀 Resultados 🚀</h2>
                 <p className="text-sm text-muted-foreground">Acompanhe nossos clientes</p>
             </div>
             <Carousel className="w-full 2xl:max-w-[1500px]">

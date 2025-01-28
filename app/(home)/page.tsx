@@ -36,7 +36,7 @@ export default function Home() {
         <CustomersSession />
       </div>
 
-      <div className="pt-10">
+      <div className="pt-6">
         <WorkFormSession />
       </div>
     </>

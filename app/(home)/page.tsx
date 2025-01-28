@@ -5,6 +5,7 @@ import ServicesSession from "./_components/services-session";
 import { Separator } from "@/components/ui/separator";
 import FeedbackSession from "./_components/feedback-session";
 import CustomersSession from "./_components/customers-session";
+import WorkFormSession from "./_components/work-form-session";
 
 export default function Home() {
   return (
@@ -33,6 +34,10 @@ export default function Home() {
       <div className="p-5 lg:px-20
         2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
         <CustomersSession />
+      </div>
+
+      <div className="pt-10">
+        <WorkFormSession />
       </div>
     </>
   );

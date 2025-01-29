@@ -7,7 +7,7 @@ const WorkFormSession = () => {
   return (
     <div className="bg-primary">
       <div className="px-5 flex flex-col items-center pt-5">
-        <h2 className="text-lg uppercase text-primary font-bold text-[#F6E7D8]">🎯 Planejamento Estratégico 🎯</h2>
+        <h2 className="text-lg uppercase font-bold text-[#F6E7D8]">🎯 Planejamento Estratégico 🎯</h2>
         <p className="text-sm text-muted">Para levar seu negócio à outro patamar</p>
       </div>
 

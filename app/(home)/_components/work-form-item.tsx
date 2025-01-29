@@ -11,7 +11,7 @@ const WorkFormItem = ({ workForm }: WorkFormParameters) => {
         <Card className="
             min-w-full max-w-full 
             rounded-2xl 
-            bg-[#F6E7D8] shadow-md shadow-[#F6E7D8]
+            bg-tertiary shadow-md shadow-tertiary
             border border-white">
             <CardContent className="p-0">
                 <div className="flex flex-col">
@@ -23,7 +23,11 @@ const WorkFormItem = ({ workForm }: WorkFormParameters) => {
                         <Image
                             src={workForm.imagePath}
                             alt={workForm.title}
-                            className="z-10 rounded-full object-cover h-[150px] mt-2 shadow-md shadow-[#F6E7D8]"
+                            className="
+                                z-10 rounded-full 
+                                object-cover 
+                                h-[150px] mt-2 
+                                shadow-md shadow-tertiary"
                             height={150} width={150} />
                     </div>
 

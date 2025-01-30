@@ -83,7 +83,7 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
                                     <FormItem>
                                         <FormLabel>Ramo da Empresa</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm" placeholder="Setor da sua empresa (imobiliário, estática...)" {...field} />
+                                            <Input className="text-sm" placeholder="Setor da sua empresa (imobiliário, estética...)" {...field} />
                                         </FormControl>
                                     </FormItem>
                                 )}

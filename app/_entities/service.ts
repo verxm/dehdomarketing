@@ -3,4 +3,5 @@ export interface Service {
     name: string,
     description: string,
     image: string,
+    icon: React.ComponentType<{ className?: string }>,
 }

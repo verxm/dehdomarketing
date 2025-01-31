@@ -2,7 +2,7 @@
 
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
-import { z } from "zod";
+import { string, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
 import {
@@ -14,6 +14,10 @@ import {
 } from "@/components/ui/form"
 import { Input } from "./ui/input";
 import { BsWhatsapp } from "react-icons/bs";
+import { useState } from "react";
+import { MultiSelect } from "./ui/multi-select";
+import { servicesRepository } from "@/app/_repositories/services-local-repository";
+import { whatsAppSenderService } from "@/services/whatsapp-sender-service";
 
 interface RequestBudgetParameters {
     triggerElement: JSX.Element
@@ -23,24 +27,39 @@ const formSchema = z.object({
     companyName: z.string().optional(),
     responsible: z.string().optional(),
     businessSector: z.string().optional(),
-    interestedServices: z.string().optional(),
-})
+    interestedServices: z.array(z.string()).optional(),
+});
 
 const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
+    const allServices = servicesRepository.getAll();
+
+    const serviceMultiSelectItems = allServices.map((service) => {
+        return { value: service.id, label: service.name, icon: service.icon }
+    });
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
     })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+        console.log(selectedServices)
+
+        whatsAppSenderService.sendBudgetRequest(
+            values.companyName, 
+            values.responsible, 
+            values.businessSector, 
+            selectedServices)
     }
+
+    const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
     return (
         <Dialog>
             <DialogTrigger asChild>
                 {triggerElement}
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[480px] max-w-[410px] px-0">
+            <DialogContent className="sm:max-w-[700px] max-w-[410px] px-0">
                 <DialogHeader className="px-6">
                     <DialogTitle className="uppercase text-primary">Solicitar Orçamento</DialogTitle>
                     <DialogDescription className="text-xs">
@@ -92,12 +111,17 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
                             <FormField
                                 control={form.control}
                                 name="interestedServices"
-                                render={({ field }) => (
+                                render={() => (
                                     <FormItem>
                                         <FormLabel>Serviços</FormLabel>
                                         <FormControl>
-                                            {/* TODO: Alterar por um Select */}
-                                            <Input className="text-sm" placeholder="Quais serviços tem interesse?" {...field} />
+                                            <MultiSelect
+                                                options={serviceMultiSelectItems}
+                                                onValueChange={setSelectedServices}
+                                                defaultValue={selectedServices}
+                                                placeholder="Selecione os serviços que tem interesse"
+                                                variant="inverted"
+                                                maxCount={10} />
                                         </FormControl>
                                     </FormItem>
                                 )}

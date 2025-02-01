@@ -46,7 +46,8 @@ const ContacButton = ({ contactType }: ContactButtonParameters) => {
                         <Button 
                             variant="default"   
                             className="
-                                border border-white 
+                                border border-white
+                                translate-x-0 hover:translate-x-0
                                 shadow-primary shadow-md 
                                 w-12 h-12
                                 rounded-full 

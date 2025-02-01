@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "./ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { string, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
@@ -18,6 +18,7 @@ import { useState } from "react";
 import { MultiSelect } from "./ui/multi-select";
 import { servicesRepository } from "@/app/_repositories/services-local-repository";
 import { whatsAppSenderService } from "@/services/whatsapp-sender-service";
+import { AtSign } from "lucide-react";
 
 interface RequestBudgetParameters {
     triggerElement: JSX.Element
@@ -27,6 +28,7 @@ const formSchema = z.object({
     companyName: z.string().optional(),
     responsible: z.string().optional(),
     businessSector: z.string().optional(),
+    instagramIdentifier: z.string().optional(),
     interestedServices: z.array(z.string()).optional(),
 });
 
@@ -42,13 +44,11 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
     })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
-        console.log(selectedServices)
-
         whatsAppSenderService.sendBudgetRequest(
-            values.companyName, 
-            values.responsible, 
-            values.businessSector, 
+            values.companyName,
+            values.responsible,
+            values.businessSector,
+            values.instagramIdentifier,
             selectedServices)
     }
 
@@ -110,6 +110,24 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
 
                             <FormField
                                 control={form.control}
+                                name="instagramIdentifier"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Instagram</FormLabel>
+                                        <FormControl>
+                                            <div className="w-full relative">
+                                                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 border-r pr-1 border-gray-300">
+                                                    <AtSign size={18} className="text-muted-foreground" />
+                                                </div>
+                                                <Input className="text-sm pl-9" placeholder="seu-insta" {...field} />
+                                            </div>
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+
+                            <FormField
+                                control={form.control}
                                 name="interestedServices"
                                 render={() => (
                                     <FormItem>
@@ -128,9 +146,11 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
                             />
                         </div>
                         <DialogFooter className="pt-5 border-t border-gray-300 border-dashed">
-                            <Button className="mx-6 font-bold" type="submit">
-                                Enviar Solicitação <BsWhatsapp />
-                            </Button>
+                            <DialogClose asChild>
+                                <Button className="mx-6 font-bold" type="submit">
+                                    Enviar Solicitação <BsWhatsapp />
+                                </Button>
+                            </DialogClose>
                         </DialogFooter>
                     </form>
                 </Form>

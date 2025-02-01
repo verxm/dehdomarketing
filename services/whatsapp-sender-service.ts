@@ -5,6 +5,7 @@ export const whatsAppSenderService = {
         companyName: string | undefined,
         responsible: string | undefined,
         businessSector: string | undefined,
+        instagramIdentifier: string | undefined,
         serviceIds: string[]) => {
         let requestBudgetMessage = `Oi! Tudo bem? %0A%0AGostaria de solicitar um orçamento ⤵️⤵️`
 
@@ -17,7 +18,11 @@ export const whatsAppSenderService = {
         }
 
         if (businessSector) {
-            requestBudgetMessage += `%0AQual o ramo da empresa: *${businessSector}*`;
+            requestBudgetMessage += `%0ARamo da empresa: *${businessSector}*`;
+        }
+
+        if (instagramIdentifier) {
+            requestBudgetMessage += `%0AInstagram: *@${instagramIdentifier}*`;
         }
 
         if (serviceIds && serviceIds.length > 0){
@@ -25,7 +30,7 @@ export const whatsAppSenderService = {
                 .getServiceNamesByIds(serviceIds)
                 .join(", ");
 
-            requestBudgetMessage += `%0AQual serviço tens interesse: *${splitedServices}*`;
+            requestBudgetMessage += `%0AServiços que tenho interesse: *${splitedServices}*`;
         }
 
         const whatsAppLink = `https://wa.me/5551999028748?text=${requestBudgetMessage}`;

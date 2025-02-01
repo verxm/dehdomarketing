@@ -45,7 +45,7 @@ export const servicesRepository = {
     },
     getServiceNamesByIds: (ids: string[]) => {
         return allServices
-            .filter(x => x.id in ids)
+            .filter(x => ids.includes(x.id))
             .map((service) => service.name);
     }
 }

@@ -22,13 +22,21 @@ const ServiceItem = ({ service }: ServiceItemParameters) => {
                         className="rounded-2xl" />
                 </div>
 
-                <h3 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap text-gray-500">{service.name}</h3>
+                <div className="flex flex-row gap-2 text-gray-500 mt-2">
+                    <h3 className="
+                        font-bold text-ellipsis text-nowrap
+                        overflow-hidden">
+                        {service.name}
+                    </h3>
+                    <service.icon className="w-4"/>
+                </div>
+
                 <p className="pl-2 pt-2 text-sm text-muted-foreground min-h-[90px] max-h-[90px] whitespace-pre-line line-clamp-4">
                     {service.description}
                 </p>
             </CardContent>
             <CardFooter className="flex justify-end p-5 pt-1">
-                <ServiceDetail service={service}/>
+                <ServiceDetail service={service} />
             </CardFooter>
         </Card>
     );

@@ -19,7 +19,10 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
     return (
         <Drawer>
             <DrawerTrigger asChild>
-                <Button variant="outline">Ver mais</Button>
+                <Button variant="outline" className="
+                    hover:text-white text-primary 
+                    translate-x-0 
+                    hover:translate-x-0 hover:bg-primary/90">Ver mais</Button>
             </DrawerTrigger>
             <DrawerContent>
                 <div className="mx-auto w-full max-w-sm">

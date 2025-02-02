@@ -25,7 +25,6 @@ const Header = () => {
                             alt="Deh do Marketing" 
                             height={100} width={70} />
                     </Link>
-``
                     <RequestBudget triggerElement={budgetButton} />
 
                 </CardContent>

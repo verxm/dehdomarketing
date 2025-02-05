@@ -14,7 +14,7 @@ const WhoWeAreImage = ({ imagePath }: WhoWeAreImageParameters) => {
                 rounded-xl object-cover 
                 w-full min-h-[300px]
                 lg:min-h-[400px]
-                lg:mt-3" />
+                lg:mt-6" />
     );
 }
 

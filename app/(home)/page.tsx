@@ -41,7 +41,7 @@ export default function Home() {
         <WorkFormSession />
       </div>
 
-      <div className="py-9 px-7">
+      <div className="py-9 px-7 md:px-14">
         <WhoWeAreSession />
       </div>
     </>

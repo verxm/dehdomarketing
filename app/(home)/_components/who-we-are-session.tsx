@@ -5,23 +5,27 @@ const WhoWeAreSession = () => {
 
     return (
         <div className="flex flex-col w-full">
-            <div className="px-5 flex flex-col items-center pb-6">
+            <div className="flex flex-col items-center pb-6">
                 <h2 className="text-lg uppercase font-bold text-primary">🙋🏼‍♀️ Quem sou eu 🙋🏼‍♀️</h2>
                 <p className="text-sm text-muted-foreground">Um pouco da minha história</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 px-5">
-                <WhoWeAreImage imagePath="/quem-sou-1.JPEG" />
-                <WhoWeAreImage imagePath="/quem-sou-2.JPEG" />
-                <WhoWeAreImage imagePath="/quem-sou-3.JPG" />
-            </div>
+            <div className="lg:grid lg:grid-cols-5">
+                <div className="grid grid-cols-3 gap-3 lg:col-span-2">
+                    <WhoWeAreImage imagePath="/quem-sou-1.JPEG" />
+                    <WhoWeAreImage imagePath="/quem-sou-2.JPEG" />
+                    <WhoWeAreImage imagePath="/quem-sou-3.JPG" />
+                </div>
 
-            <div className="flex flex-col justify-between p-5">
-                <h1 className="font-bold text-xl font-tanpearl text-primary/70">Débora de Borba</h1>
-                <p className="
+                <div className="
+                    flex flex-col justify-between py-7
+                    lg:pl-10 lg:pr-5 lg:col-span-3">
+                    <h1 className="font-bold text-xl font-tanpearl text-primary/70">Débora de Borba</h1>
+                    <p className="
                     whitespace-pre-line text-muted-foreground
                     pt-4">{description}
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     );

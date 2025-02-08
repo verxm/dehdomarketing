@@ -21,7 +21,9 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator className="mt-10" />
+      <div className="pt-14">
+        <WorkFormSession />
+      </div>
 
       <div className="mt-10">
         <ServicesSession />
@@ -29,16 +31,13 @@ export default function Home() {
 
       <Separator className="mt-12" />
 
-      <div className="pt-10 pb-5">
-        <FeedbackSession />
-      </div>
       <div className="p-5 lg:px-20
         2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
         <CustomersSession />
       </div>
 
-      <div className="pt-6">
-        <WorkFormSession />
+      <div className="pt-10 pb-10 bg-primary">
+        <FeedbackSession />
       </div>
 
       <div className="py-9 px-7 md:px-14">

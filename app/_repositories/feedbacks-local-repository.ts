@@ -6,7 +6,7 @@ const allFeedbacks = [
         author: "Dra. Gabriela Torres",
         authorImage: "/perfil-gabi-gt-clinic.jpeg",
         authorPosition: "Proprietária - GT Clinic",
-        testimony: "Queria vir te dizer que estou muito feliz com os nossos resultados esse mês, conseguimos, conseguimos aumentar muito a visibilidade da página.. até levei um susto kkk \n\nDébora eu sou muito grata por todo teu empenho e dedicação por fazer a minha marca aparecer e crescer, sou grata por tudo pois sei que essa dedicação além de ser algo profissional, criamos uma conexão de parceria e muita sintonia (hoje eu entendo q o marketing é isso) te agrade muito por tanto.",
+        testimony: "Queria vir te dizer que estou muito feliz com os nossos resultados esse mês, conseguimos aumentar muito a visibilidade da página.. até levei um susto kkk \n\nDébora eu sou muito grata por todo teu empenho e dedicação por fazer a minha marca aparecer e crescer, sou grata por tudo pois sei que essa dedicação além de ser algo profissional, criamos uma conexão de parceria e muita sintonia (hoje eu entendo q o marketing é isso) te agrade muito por tanto.",
     },
     {
         id: "feedback-2",

@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import FeedbackSession from "./_components/feedback-session";
 import CustomersSession from "./_components/customers-session";
 import WorkFormSession from "./_components/work-form-session";
+import WhoWeAreSession from "./_components/who-we-are-session";
 
 export default function Home() {
   return (
@@ -38,6 +39,10 @@ export default function Home() {
 
       <div className="pt-6">
         <WorkFormSession />
+      </div>
+
+      <div className="py-9 px-7 md:px-14">
+        <WhoWeAreSession />
       </div>
     </>
   );

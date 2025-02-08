@@ -15,7 +15,7 @@ const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
                 md:max-w-[550px] md:h-[270px]
                 xl:max-w-[690px] xl:h-[270px]
                 cursor-pointer">
-            <Card className="hover:bg-gray-950/[.05] h-full">
+            <Card className="hover:bg-gray-100 h-full">
                 <CardHeader className="pt-4">
                     <div className="flex flex-row items-center gap-3">
                         <Avatar>
@@ -32,7 +32,6 @@ const FeedbackItem = ({ feedback }: FeedbackItemParameters) => {
                 </CardHeader>
                 <Separator className="mt-[-13px] mb-4" />
                 <CardContent>
-
                     <p className="italic text-xs whitespace-pre-line">"{feedback.testimony}"</p>
                 </CardContent>
             </Card>

@@ -31,12 +31,12 @@ export default function Home() {
 
       <Separator className="mt-12" />
 
-      <div className="p-5 lg:px-20
+      <div className="p-5 lg:px-20 pb-12
         2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
         <CustomersSession />
       </div>
 
-      <div className="pt-10 pb-10 bg-primary">
+      <div className="pt-8 pb-10 bg-primary">
         <FeedbackSession />
       </div>
 

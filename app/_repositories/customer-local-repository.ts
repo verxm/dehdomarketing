@@ -10,17 +10,17 @@ const allCustomers = [
         beforeInstagramInsights: {
             dateRange: "25/07/2023 à 09/08/2023",
             accountsReached: 1099,
-            accountsWithEngagement: 138,
+            reels: 618,
             totalFollowers: 1842,
-            sharedContents: 7,
+            stories: 121,
             profileImagePath: "/insta-gt-clinic-antes.PNG"
         },
         afterInstagramInsights: {
             dateRange: "17/12/2024 à 15/01/2025",
             accountsReached: 15989,
-            accountsWithEngagement: 588,
+            reels: 5991,
             totalFollowers: 2408,
-            sharedContents: 44,
+            stories: 957,
             profileImagePath: "/insta-gt-clinic-depois.PNG"
         },
     },
@@ -33,17 +33,17 @@ const allCustomers = [
         beforeInstagramInsights: {
             dateRange: "09/01/2024 à 09/02/2024",
             accountsReached: 1223,
-            accountsWithEngagement: 209,
+            reels: 218,
             totalFollowers: 5283,
-            sharedContents: 12,
+            stories: 195,
             profileImagePath: "/insta-orlandoborala-antes.png"
         },
         afterInstagramInsights: {
             dateRange: "17/12/2024 à 15/01/2025",
             accountsReached: 33656,
-            accountsWithEngagement: 1287,
+            reels: 32627,
             totalFollowers: 9129,
-            sharedContents: 62,
+            stories: 1619,
             profileImagePath: "/insta-orlandoborala-depois.png"
         },
     },
@@ -56,17 +56,17 @@ const allCustomers = [
         beforeInstagramInsights: {
             dateRange: "10/10/2023 à 10/11/2023",
             accountsReached: 976,
-            accountsWithEngagement: 297,
+            reels: 669,
             totalFollowers: 10273,
-            sharedContents: 14,
+            stories: 363,
             profileImagePath: "/insta-instituto-derma-antes.PNG"
         },
         afterInstagramInsights: {
-            dateRange: "17/12/2024 à 15/01/2025",
-            accountsReached: 20081,
-            accountsWithEngagement: 1441,
+            dateRange: "08/01/2025 à 08/02/2025",
+            accountsReached: 65997,
+            reels: 54464,
             totalFollowers: 12993,
-            sharedContents: 48,
+            stories: 3212,
             profileImagePath: "/insta-instituto-derma-depois.PNG"
         },
     },

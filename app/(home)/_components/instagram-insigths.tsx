@@ -19,9 +19,9 @@ const InstagramInsights = ({
             after: afterInsights.accountsReached
         },
         {
-            metric: "Enganjamento",
-            before: beforeInsights.accountsWithEngagement,
-            after: afterInsights.accountsWithEngagement
+            metric: "Reels",
+            before: beforeInsights.reels,
+            after: afterInsights.reels
         },
         {
             metric: "Seguidores",
@@ -29,9 +29,9 @@ const InstagramInsights = ({
             after: afterInsights.totalFollowers
         },
         {
-            metric: "Posts",
-            before: beforeInsights.sharedContents,
-            after: afterInsights.sharedContents
+            metric: "Stories",
+            before: beforeInsights.stories,
+            after: afterInsights.stories
         },
     ]
 
@@ -53,7 +53,7 @@ const InstagramInsights = ({
                 text-xxs text-gray-500 italic text-nowrap
                 justify-center">
                 <p>Antes: {beforeInsights.dateRange}</p>
-                <p>Depois: {beforeInsights.dateRange}</p>
+                <p>Depois: {afterInsights.dateRange}</p>
             </div>
             <ChartContainer config={chartConfig} className="
                 min-h-[100px] w-full ml-[-20px]

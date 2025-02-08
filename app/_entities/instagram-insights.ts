@@ -1,8 +1,8 @@
 export interface InstagramInsight {
     dateRange: string,
     accountsReached: number,
-    accountsWithEngagement: number,
+    reels: number,
     totalFollowers: number,
-    sharedContents: number,
+    stories: number,
     profileImagePath: string,
 }

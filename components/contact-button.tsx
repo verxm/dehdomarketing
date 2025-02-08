@@ -48,7 +48,8 @@ const ContacButton = ({ contactType }: ContactButtonParameters) => {
                             className="
                                 border border-white
                                 translate-x-0 hover:translate-x-0
-                                shadow-primary shadow-md 
+                                hover:bg-white hover:text-primary hover:border-primary
+                                shadow-primary/50 shadow-md 
                                 w-12 h-12
                                 rounded-full 
                                 hover:shadow-sm hover:transition-all">

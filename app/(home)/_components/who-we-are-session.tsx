@@ -1,7 +1,19 @@
+import { Button } from "@/components/ui/button";
 import WhoWeAreImage from "./who-we-are-image";
+import { Key } from "lucide-react";
+import RequestBudget from "@/components/request-budget";
 
 const WhoWeAreSession = () => {
-    const description = "Oi, eu sou a Déh do Marketing! 🚀\n\nDesde 2019, venho ajudando empresas a se posicionarem no digital de forma estratégica e impactante. Minha agência de marketing não só cria estratégias, mas transforma negócios com soluções personalizadas que realmente fazem a diferença!\n\nSou formada em Marketing pela Uniritter e completamente apaixonada pelo que faço! Curiosa por natureza, estou sempre aprendendo e me atualizando para entregar o melhor aos meus clientes.\n\nHoje, já levamos nossos resultados para diversas cidades, como Porto Alegre, Viamão, Florianópolis, Balneário Camboriú e até Orlando, nos EUA! E agora, estamos prontos para levar a sua empresa para o próximo nível também.\n\nSe você quer ver seu negócio crescer no digital, está no lugar certo. Vamos juntos? 🚀💡";
+    const description = "Oi, eu sou a Déh do Marketing! 🚀\n\nDesde 2019, venho ajudando empresas a se posicionarem no digital de forma estratégica e impactante. Minha agência de marketing não só cria estratégias, mas transforma negócios com soluções personalizadas que realmente fazem a diferença!\n\nSou formada em Marketing pela Uniritter e completamente apaixonada pelo que faço! Curiosa por natureza, estou sempre aprendendo e me atualizando para entregar o melhor aos meus clientes.\n\nHoje, já levamos nossos resultados para diversas cidades, como Porto Alegre, Viamão, Florianópolis, Balneário Camboriú e até Orlando, nos EUA! E agora, estamos prontos para levar a sua empresa para o próximo nível também.\n\nSe você quer ver seu negócio crescer no digital, está no lugar certo. Vamos juntas dar o próximo passo para virar a chave do seu negócio? 🚀💡";
+
+    const budgetButton = <Button className="
+        hover:text-white text-primary font-bold
+        translate-x-0 
+        hover:translate-x-0 hover:bg-primary/90
+        border-primary/40 shadow-md shadow-tertiary
+        rounded-full mr-3" variant="outline" size="sm">
+        <Key /> Virar a Chave
+    </Button>;
 
     return (
         <div className="flex flex-col w-full">
@@ -12,9 +24,9 @@ const WhoWeAreSession = () => {
 
             <div className="lg:grid lg:grid-cols-5">
                 <div className="grid grid-cols-3 gap-3 lg:col-span-2">
-                    <WhoWeAreImage imagePath="/quem-sou-1.JPEG" />
-                    <WhoWeAreImage imagePath="/quem-sou-2.JPEG" />
                     <WhoWeAreImage imagePath="/quem-sou-3.JPG" />
+                    <WhoWeAreImage imagePath="/quem-sou-2.JPEG" />
+                    <WhoWeAreImage imagePath="/quem-sou-1.JPEG" />
                 </div>
 
                 <div className="
@@ -25,6 +37,10 @@ const WhoWeAreSession = () => {
                     whitespace-pre-line text-muted-foreground
                     pt-4">{description}
                     </p>
+
+                    <div className="flex justify-center pt-7">
+                        <RequestBudget triggerElement={budgetButton} />
+                    </div>
                 </div>
             </div>
         </div>

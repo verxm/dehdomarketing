@@ -11,24 +11,29 @@ interface CustomerItemParameters {
 }
 
 const CustomerItem = ({ customer }: CustomerItemParameters) => {
+    const instagramRedirectLink = `https://www.instagram.com/${customer.instagramIdentifier}`;
+
     return (
-        <Card className="mt-20 border-primary/50 shadow-none">
+        <Card className="mt-20 border-primary/50">
             <CardContent className="p-0">
                 <div className="flex flex-col">
                     <div className="items-center flex flex-col pt-5">
-                        <Image
-                            className="
+                        <a href={instagramRedirectLink} target="_blank">
+                            <Image
+                                className="
+                                shadow-md shadow-primary
                                 rounded-full border border-primary/50
-                                absolute 
+                                items-center 
                                 object-cover
                                 mt-[-105px] h-[180px]"
-                            src={customer.logoPath}
-                            alt={customer.name} height={180} width={180} />
+                                src={customer.logoPath}
+                                alt={customer.name} height={180} width={180} />
+                        </a>
                     </div>
-                    <div className="flex flex-col items-center pt-20">
+                    <div className="flex flex-col items-center pt-5">
                         <a
                             className="text-gray-500 font-bold"
-                            href={`https://www.instagram.com/${customer.instagramIdentifier}`}
+                            href={instagramRedirectLink}
                             target="_blank">
                             @{customer.instagramIdentifier}
                         </a>

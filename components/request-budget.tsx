@@ -21,7 +21,8 @@ import { whatsAppSenderService } from "@/services/whatsapp-sender-service";
 import { AtSign } from "lucide-react";
 
 interface RequestBudgetParameters {
-    triggerElement: JSX.Element
+    triggerElement: JSX.Element,
+    interestedServiceId?: string
 }
 
 const formSchema = z.object({
@@ -32,7 +33,7 @@ const formSchema = z.object({
     interestedServices: z.array(z.string()).optional(),
 });
 
-const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
+const RequestBudget = ({ triggerElement, interestedServiceId }: RequestBudgetParameters) => {
     const allServices = servicesRepository.getAll();
 
     const serviceMultiSelectItems = allServices.map((service) => {
@@ -52,7 +53,9 @@ const RequestBudget = ({ triggerElement }: RequestBudgetParameters) => {
             selectedServices)
     }
 
-    const [selectedServices, setSelectedServices] = useState<string[]>([]);
+    const [selectedServices, setSelectedServices] = useState<string[]>(interestedServiceId 
+        ? [interestedServiceId]
+        : []);
 
     return (
         <Dialog>

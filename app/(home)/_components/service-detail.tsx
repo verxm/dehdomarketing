@@ -51,7 +51,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                         </div>
                     </div>
                     <DrawerFooter>
-                        <RequestBudget triggerElement={budgetButton} />
+                        <RequestBudget triggerElement={budgetButton} interestedServiceId={service.id} />
                         <DrawerClose asChild>
                             <Button className="uppercase" variant="outline">Voltar</Button>
                         </DrawerClose>

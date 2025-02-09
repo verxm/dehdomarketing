@@ -22,7 +22,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
     </Button>;
 
     return (
-        <Drawer>
+        <Drawer repositionInputs={false}>
             <DrawerTrigger asChild>
                 <Button variant="outline" className="
                     hover:text-white text-primary 

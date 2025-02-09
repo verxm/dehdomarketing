@@ -17,7 +17,9 @@ interface ServiceDetailParameters {
 }
 
 const ServiceDetail = ({ service }: ServiceDetailParameters) => {
-    const budgetButton = <Button className="font-bold uppercase">Solicitar orçamento</Button>;
+    const budgetButton = <Button className="font-bold uppercase">
+        Solicitar orçamento
+    </Button>;
 
     return (
         <Drawer>

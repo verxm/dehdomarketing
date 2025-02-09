@@ -2,7 +2,7 @@
 
 import { Button } from "./ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
-import { string, z } from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
 import {
@@ -62,7 +62,12 @@ const RequestBudget = ({ triggerElement, interestedServiceId }: RequestBudgetPar
             <DialogTrigger asChild>
                 {triggerElement}
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[700px] max-w-[410px] px-0">
+            <DialogContent 
+                className="
+                    sm:max-w-[700px] max-w-[410px] px-0
+                    overflow-y-scroll max-h-screen" 
+                onOpenAutoFocus={(e) => e.preventDefault()}>
+
                 <DialogHeader className="px-6">
                     <DialogTitle className="uppercase text-primary">Solicitar Orçamento</DialogTitle>
                     <DialogDescription className="text-xs">

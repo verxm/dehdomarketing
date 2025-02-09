@@ -1,4 +1,5 @@
 import { Service } from "@/app/_entities/service";
+import RequestBudget from "@/components/request-budget";
 import { Button } from "@/components/ui/button";
 import {
     Drawer,
@@ -16,6 +17,8 @@ interface ServiceDetailParameters {
 }
 
 const ServiceDetail = ({ service }: ServiceDetailParameters) => {
+    const budgetButton = <Button className="font-bold uppercase">Solicitar orçamento</Button>;
+
     return (
         <Drawer>
             <DrawerTrigger asChild>
@@ -48,7 +51,7 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                         </div>
                     </div>
                     <DrawerFooter>
-                        <Button className="font-bold uppercase">Solicitar orçamento</Button>
+                        <RequestBudget triggerElement={budgetButton} />
                         <DrawerClose asChild>
                             <Button className="uppercase" variant="outline">Voltar</Button>
                         </DrawerClose>

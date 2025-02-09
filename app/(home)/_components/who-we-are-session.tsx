@@ -10,7 +10,7 @@ const WhoWeAreSession = () => {
         hover:text-white text-primary font-bold
         translate-x-0 
         hover:translate-x-0 hover:bg-primary/90
-        border-primary/40 shadow-md shadow-tertiary
+        border-primary/40
         rounded-full mr-3" variant="outline" size="sm">
         <Key /> Virar a Chave
     </Button>;

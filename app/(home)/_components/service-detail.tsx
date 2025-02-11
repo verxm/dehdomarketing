@@ -11,6 +11,7 @@ import {
     DrawerTrigger,
 } from "@/components/ui/drawer"
 import Image from "next/image";
+import { FaLongArrowAltDown } from "react-icons/fa";
 
 interface ServiceDetailParameters {
     service: Service
@@ -50,6 +51,9 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                             <p className="max-h-[200px] overflow-auto mt-5 whitespace-pre-line text-sm flex flex-col justify-between">
                                 {service.description}
                             </p>
+                            <div className="flex flex-row justify-end pb-3">
+                                <FaLongArrowAltDown className="absolute text-gray-500" />
+                            </div>
                         </div>
                     </div>
                     <DrawerFooter>

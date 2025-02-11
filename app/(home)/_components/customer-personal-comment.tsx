@@ -1,6 +1,6 @@
+import ScrollDownIndicator from "@/components/scroll-down-indicator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { FaLongArrowAltDown } from "react-icons/fa";
 
 interface CustomerPersonalCommentParameters {
     comment: string,
@@ -22,9 +22,7 @@ const CustomerPersonalComment = ({ comment }: CustomerPersonalCommentParameters)
             <AlertDescription className="italic h-[150px] overflow-y-auto whitespace-pre-line">
                 "{comment}"
             </AlertDescription>
-            <div className="flex flex-row justify-end pb-3">
-                <FaLongArrowAltDown className="absolute text-gray-500" />
-            </div>
+            <ScrollDownIndicator/>
         </Alert>
     );
 }

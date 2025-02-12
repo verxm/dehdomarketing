@@ -29,8 +29,11 @@ const PresentationSession = () => {
                         max-sm:[--width-from:350px] max-sm:[--height-from:350px]
                         [--width-to:200px] [--height-to:200px]">
 
-                    <Image src="/logo.png" alt="Logo Deh do Marketing" className="h-full w-full object-cover" width={800} height={800} />
-
+                    <Image 
+                        src="/logo.png" 
+                        alt="Logo Deh do Marketing" 
+                        className="h-full w-full object-cover" 
+                        width={800} height={800} />
                 </motion.div>
             </div>
 

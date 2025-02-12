@@ -28,13 +28,14 @@ const PresentationSession = () => {
                         absolute mt-[200px]
                         max-sm:[--width-from:350px] max-sm:[--height-from:350px]
                         [--width-to:200px] [--height-to:200px]">
+
                     <Image src="/logo.png" alt="Logo Deh do Marketing" className="h-full w-full object-cover" width={800} height={800} />
+
                 </motion.div>
             </div>
 
             <h1 className="font-[600] mt-[230px] text-3xl mb-4 tracking-tighter">
                 Marketing com<br className="sm:hidden" />
-                {/* TODO: fazer com que o tamanho das palafras não altere o tamanho da frase */}
                 <b><FlipWords className="font-tanpearl text-primary w-[50]" words={words} /> </b>
             </h1>
 

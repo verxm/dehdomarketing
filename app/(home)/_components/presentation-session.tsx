@@ -26,7 +26,7 @@ const PresentationSession = () => {
                         border-x-4 border-white bg-primary 
                         rounded-full shadow-md
                         absolute mt-[200px]
-                        max-sm:[--width-from:400px] max-sm:[--height-from:400px]
+                        max-sm:[--width-from:350px] max-sm:[--height-from:350px]
                         [--width-to:200px] [--height-to:200px]">
                     <Image src="/logo.png" alt="Logo Deh do Marketing" className="h-full w-full object-cover" width={800} height={800} />
                 </motion.div>

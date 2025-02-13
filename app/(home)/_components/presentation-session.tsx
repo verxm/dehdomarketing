@@ -42,9 +42,8 @@ const PresentationSession = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                    duration: 1,
+                    duration: 2,
                     delay: 2,
-                    ease: [0, 0.71, 0.2, 1.01],
                 }}
                 className="font-[600] mt-[230px] text-3xl mb-4 tracking-tighter">
                 Marketing com<br className="sm:hidden" />
@@ -55,7 +54,7 @@ const PresentationSession = () => {
                 initial={{display: "none"}}
                 animate={{display: "flex"}}
                 transition={{
-                    delay: 2.5,
+                    delay: 3,
                 }}>
                 <TextAnimate
                     className="max-w-xl mx-auto text-base text-neutral-600 font-sans"

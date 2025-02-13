@@ -1,5 +1,6 @@
 'use client'
 
+import { TextAnimate } from "@/components/magicui/text-animate";
 import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -12,13 +13,13 @@ const PresentationSession = () => {
             <div className="flex flex-col items-center justify-center">
                 <motion.div
                     initial={{
-                         width: "var(--width-from, 550px)", 
-                         height: "var(--height-from, 550px)", 
-                         y: 150
+                        width: "var(--width-from, 550px)",
+                        height: "var(--height-from, 550px)",
+                        y: 150
                     }}
-                    animate={{ 
-                        width: "var(--width-to)", 
-                        height: "var(--height-to)", 
+                    animate={{
+                        width: "var(--width-to)",
+                        height: "var(--height-to)",
                         y: 0
                     }}
                     transition={{ duration: 2, ease: "easeInOut" }}
@@ -29,10 +30,10 @@ const PresentationSession = () => {
                         max-sm:[--width-from:350px] max-sm:[--height-from:350px]
                         [--width-to:200px] [--height-to:200px]">
 
-                    <Image 
-                        src="/logo.png" 
-                        alt="Logo Deh do Marketing" 
-                        className="h-full w-full object-cover" 
+                    <Image
+                        src="/logo.png"
+                        alt="Logo Deh do Marketing"
+                        className="h-full w-full object-cover"
                         width={800} height={800} />
                 </motion.div>
             </div>
@@ -50,9 +51,19 @@ const PresentationSession = () => {
                 <b><FlipWords className="font-tanpearl text-primary w-[50]" words={words} /> </b>
             </motion.h1>
 
-            <p className="max-w-xl mx-auto text-base text-neutral-600">
-                Tudo o que sua marca precisa para conquistar <b>resultados de impacto</b>. Oferecemos soluções criativas, alinhadas a <b>estratégias precisas</b>, para levar sua comunicação a um <b>novo nível</b>.
-            </p>
+            <motion.div
+                initial={{display: "none"}}
+                animate={{display: "flex"}}
+                transition={{
+                    delay: 2.5,
+                }}>
+                <TextAnimate
+                    className="max-w-xl mx-auto text-base text-neutral-600 font-sans"
+                    animation="blurInDown" by="word">
+                    Tudo o que sua marca precisa para conquistar resultados de impacto. Oferecemos soluções criativas, alinhadas a estratégias precisas, para levar sua comunicação a um novo nível.
+                </TextAnimate>
+            </motion.div>
+
         </div>
     );
 }

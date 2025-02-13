@@ -39,11 +39,11 @@ const PresentationSession = () => {
             </div>
 
             <motion.h1
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [-60, 0], scale: [0.8, 1] }}
                 transition={{
-                    duration: 2,
-                    delay: 2,
+                    duration: 1,
+                    delay: 1.7,
                 }}
                 className="font-[600] mt-[230px] text-3xl mb-4 tracking-tighter">
                 Marketing com<br className="sm:hidden" />

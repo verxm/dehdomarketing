@@ -58,7 +58,7 @@ const PresentationSession = () => {
                 }}>
                 <TextAnimate
                     className="max-w-xl mx-auto text-base text-neutral-600 font-sans"
-                    animation="blurInDown" by="word">
+                    animation="blurInDown" by="word" once={true}>
                     Tudo o que sua marca precisa para conquistar resultados de impacto. Oferecemos soluções criativas, alinhadas a estratégias precisas, para levar sua comunicação a um novo nível.
                 </TextAnimate>
             </motion.div>

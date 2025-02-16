@@ -362,6 +362,7 @@ export function TextAnimate({
         variants={finalVariants.container}
         initial="hidden"
         whileInView={startOnView ? "show" : undefined}
+        viewport={{once: true}}
         animate={startOnView ? undefined : "show"}
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
@@ -372,6 +373,7 @@ export function TextAnimate({
             key={`${by}-${segment}-${i}`}
             variants={finalVariants.item}
             custom={i * staggerTimings[by]}
+            viewport={{once: true}}
             className={cn(
               by === "line" ? "block" : "inline-block whitespace-pre",
               segmentClassName,

@@ -1,3 +1,5 @@
+'use client'
+
 import Header from "@/components/header";
 import PresentationSession from "./_components/presentation-session";
 import Contacts from "@/app/(home)/_components/contacts";
@@ -7,6 +9,7 @@ import FeedbackSession from "./_components/feedback-session";
 import CustomersSession from "./_components/customers-session";
 import WorkFormSession from "./_components/work-form-session";
 import WhoWeAreSession from "./_components/who-we-are-session";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -16,33 +19,43 @@ export default function Home() {
       <div className="pt-14 px-7">
         <PresentationSession />
 
-        <div className="pt-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 1] }}
+          transition={{ delay: 6 }}
+          className="pt-5">
           <Contacts />
+        </motion.div>
+      </div>
+{/* TODO: tentar fazer essa exibição via react, sem animação, vai permitir que seja carregado em server side */}
+      <motion.div
+        initial={{ display: "none" }}
+        animate={{ display: "initial" }}
+        transition={{ delay: 6 }}
+        className="pt-5">
+        <div className="pt-14">
+          <WorkFormSession />
         </div>
-      </div>
 
-      <div className="pt-14">
-        <WorkFormSession />
-      </div>
+        <div className="mt-10">
+          <ServicesSession />
+        </div>
 
-      <div className="mt-10">
-        <ServicesSession />
-      </div>
+        <Separator className="mt-12" />
 
-      <Separator className="mt-12" />
-
-      <div className="p-5 lg:px-20 pb-12
+        <div className="p-5 lg:px-20 pb-12
         2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
-        <CustomersSession />
-      </div>
+          <CustomersSession />
+        </div>
 
-      <div className="pt-8 pb-10 bg-primary">
-        <FeedbackSession />
-      </div>
+        <div className="pt-8 pb-10 bg-primary">
+          <FeedbackSession />
+        </div>
 
-      <div className="py-9 px-7 md:px-14">
-        <WhoWeAreSession />
-      </div>
+        <div className="py-9 px-7 md:px-14">
+          <WhoWeAreSession />
+        </div>
+      </motion.div>
     </>
   );
 }

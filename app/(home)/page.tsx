@@ -20,18 +20,18 @@ export default function Home() {
         <PresentationSession />
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1] }}
-          transition={{ delay: 6 }}
-          className="pt-5">
+          className="pt-5 flex flex-col"
+          initial={{ display: "none" }}
+          animate={{ display: "flex" }}
+          transition={{ delay: 5.5 }}>
           <Contacts />
         </motion.div>
       </div>
-{/* TODO: tentar fazer essa exibição via react, sem animação, vai permitir que seja carregado em server side */}
+      
       <motion.div
         initial={{ display: "none" }}
         animate={{ display: "initial" }}
-        transition={{ delay: 6 }}
+        transition={{ delay: 6.5 }}
         className="pt-5">
         <div className="pt-14">
           <WorkFormSession />

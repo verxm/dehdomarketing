@@ -1,11 +1,16 @@
 import { workFormRepository } from "@/app/_repositories/work-form-local-repository";
 import WorkFormItem from "./work-form-item";
+import { motion } from "framer-motion";
 
 const WorkFormSession = () => {
   const allWorkForms = workFormRepository.getAll();
 
   return (
-    <div className="bg-primary">
+    <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1, transition: {duration: 1}}}
+      viewport={{once:true}}
+      className="bg-primary">
       <div className="px-5 flex flex-col items-center pt-5">
         <h2 className="text-lg uppercase font-bold text-tertiary">🎯 Planejamento Estratégico 🎯</h2>
         <p className="text-sm text-muted">Para levar seu negócio à outro patamar</p>
@@ -22,7 +27,7 @@ const WorkFormSession = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

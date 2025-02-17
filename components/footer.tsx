@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Footer = () => {
     const [isHide, setIsHide] = useState(true);
-    setTimeout(() => setIsHide(false), 7000);
+    setTimeout(() => setIsHide(false), 8000);
 
     return (
         <>

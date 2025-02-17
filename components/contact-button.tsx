@@ -2,9 +2,11 @@ import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { Button } from "./ui/button";
 import { FiMail } from "react-icons/fi";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
+import { motion } from "framer-motion";
 
 interface ContactButtonParameters {
     contactType: ContactType,
+    animationDelay: number
 }
 
 export enum ContactType {
@@ -19,7 +21,7 @@ interface ContactButtonProperties {
     RedirectLink: string
 }
 
-const ContacButton = ({ contactType }: ContactButtonParameters) => {
+const ContacButton = ({ contactType, animationDelay }: ContactButtonParameters) => {
     const buttonProperties: { [key in ContactType]?: ContactButtonProperties } = {
         [ContactType.WhatsApp]: {
             Icon: <BsWhatsapp size={64} />,
@@ -42,7 +44,21 @@ const ContacButton = ({ contactType }: ContactButtonParameters) => {
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href={buttonProperties[contactType]?.RedirectLink} target="_blank">
+                    <motion.a 
+                        initial={{ opacity: 0, scale: 0.5, y:40}}
+                        whileInView={{
+                            opacity: 1, 
+                            scale: 1 ,
+                            y: 0,
+                            transition:{
+                                duration: 0.8,
+                                delay: animationDelay
+                                //ease: [0, 0.71, 0.2, 1.01],
+                            }
+                        }}
+                        viewport={{once:true}}
+                        href={buttonProperties[contactType]?.RedirectLink} 
+                        target="_blank">
                         <Button 
                             variant="default"   
                             className="
@@ -55,7 +71,7 @@ const ContacButton = ({ contactType }: ContactButtonParameters) => {
                                 hover:shadow-sm hover:transition-all">
                             {buttonProperties[contactType]?.Icon}
                         </Button>
-                    </a>
+                    </motion.a>
 
                 </TooltipTrigger>
                 <TooltipContent side="bottom">

@@ -1,24 +1,68 @@
+'use client'
+
+import { TextAnimate } from "@/components/magicui/text-animate";
 import { FlipWords } from "@/components/ui/flip-words";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const PresentationSession = () => {
     const words = ["propósito", "estratégia", "qualidade", "segurança"];
 
     return (
-        <div className="flex flex-col justify-center items-center text-center max-w-5xl mx-auto">
-            <div className="border-x-4 border-white bg-primary h-40 w-40 flex items-center rounded-full shadow-md">
-                <Image src="/logo.png" alt="Logo Deh do Marketing" height={200} width={200} />
+        <div className="flex flex-col justify-center items-center text-center">
+            <div className="flex flex-col items-center justify-center">
+                <motion.div
+                    initial={{
+                        width: "var(--width-from, 550px)",
+                        height: "var(--height-from, 550px)",
+                        y: 110
+                    }}
+                    animate={{
+                        width: "var(--width-to)",
+                        height: "var(--height-to)",
+                        y: 0
+                    }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    className="
+                        border-x-4 border-white bg-primary 
+                        rounded-full shadow-md
+                        absolute mt-[200px]
+                        max-sm:[--width-from:350px] max-sm:[--height-from:350px]
+                        [--width-to:200px] [--height-to:200px]">
+
+                    <Image
+                        src="/logo.png"
+                        alt="Logo Deh do Marketing"
+                        className="h-full w-full object-cover"
+                        width={800} height={800} />
+                </motion.div>
             </div>
 
-            <h1 className="font-[600] mt-11 text-3xl mb-4 tracking-tighter">
-                Marketing com<br className="sm:hidden"/>
-                {/* TODO: fazer com que o tamanho das palafras não altere o tamanho da frase */}
+            <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [-60, 0], scale: [0.8, 1] }}
+                transition={{
+                    duration: 0.7,
+                    delay: 1.7,
+                }}
+                className="font-[600] mt-[230px] text-3xl mb-4 tracking-tighter">
+                Marketing com<br className="sm:hidden" />
                 <b><FlipWords className="font-tanpearl text-primary w-[50]" words={words} /> </b>
-            </h1>
+            </motion.h1>
 
-            <p className="max-w-xl mx-auto text-base text-neutral-600">
-            Tudo o que sua marca precisa para conquistar <b>resultados de impacto</b>. Oferecemos soluções criativas, alinhadas a <b>estratégias precisas</b>, para levar sua comunicação a um <b>novo nível</b>.
-            </p>
+            <motion.div
+                initial={{display: "none"}}
+                animate={{display: "flex"}}
+                transition={{
+                    delay: 2.2,
+                }}>
+                <TextAnimate
+                    className="max-w-xl mx-auto text-base text-neutral-600 font-sans"
+                    animation="blurInDown" by="word" once={true}>
+                    Tudo o que sua marca precisa para conquistar resultados de impacto. Oferecemos soluções criativas, alinhadas a estratégias precisas, para levar sua comunicação a um novo nível.
+                </TextAnimate>
+            </motion.div>
+
         </div>
     );
 }

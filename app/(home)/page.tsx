@@ -23,7 +23,7 @@ export default function Home() {
           className="pt-5 flex flex-col"
           initial={{ display: "none" }}
           animate={{ display: "flex" }}
-          transition={{ delay: 5.5 }}>
+          transition={{ delay: 5 }}>
           <Contacts />
         </motion.div>
       </div>
@@ -31,7 +31,7 @@ export default function Home() {
       <motion.div
         initial={{ display: "none" }}
         animate={{ display: "initial" }}
-        transition={{ delay: 6.5 }}
+        transition={{ delay: 6.3 }}
         className="pt-5">
         <div className="pt-14">
           <WorkFormSession />

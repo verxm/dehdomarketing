@@ -15,7 +15,7 @@ const PresentationSession = () => {
                     initial={{
                         width: "var(--width-from, 550px)",
                         height: "var(--height-from, 550px)",
-                        y: 150
+                        y: 110
                     }}
                     animate={{
                         width: "var(--width-to)",
@@ -42,7 +42,7 @@ const PresentationSession = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [-60, 0], scale: [0.8, 1] }}
                 transition={{
-                    duration: 1,
+                    duration: 0.7,
                     delay: 1.7,
                 }}
                 className="font-[600] mt-[230px] text-3xl mb-4 tracking-tighter">
@@ -54,7 +54,7 @@ const PresentationSession = () => {
                 initial={{display: "none"}}
                 animate={{display: "flex"}}
                 transition={{
-                    delay: 3,
+                    delay: 2.2,
                 }}>
                 <TextAnimate
                     className="max-w-xl mx-auto text-base text-neutral-600 font-sans"

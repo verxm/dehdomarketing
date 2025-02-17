@@ -22,7 +22,7 @@ const Header = () => {
         <header className="mt-[-1px] mr-[-1px] ml-[-1px] sticky top-0 z-50">
             <motion.div
                 initial={{opacity: 0}}
-                animate={{opacity: [0, 0.5, 1], y: [-40, 0]}}
+                animate={{opacity: [0, 0.5, 1], y: [-60, 0]}}
                 transition={{delay: 5.5, duration: 0.8, ease: "easeInOut"}}>
                 <Card className="
                     rounded-t-none border-t-0 border-r-0 border-l-1 border-b-1 border-primary border-solid shadow-md">

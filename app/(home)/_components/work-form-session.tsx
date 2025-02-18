@@ -16,15 +16,20 @@ const WorkFormSession = () => {
         <p className="text-sm text-muted">Para levar seu negócio à outro patamar</p>
       </div>
 
-      <div className="
-        flex gap-4
-        px-5 pb-10 pt-6
-        overflow-x-auto [&::-webkit-scrollbar]:hidden
-        2xl:justify-center">
+      <div
+        className="
+          flex gap-4
+          px-5 pb-10 pt-6
+          overflow-x-auto [&::-webkit-scrollbar]:hidden
+          2xl:justify-center">
         {allWorkForms.map((workForm) => (
-          <div key={workForm.id} className="min-w-[390px] max-w-[390px]">
+          <motion.div
+            whileInView={{x: [100, 0], transition: {duration:0.5}}} 
+            viewport={{once: true}}
+            key={workForm.id} 
+            className="min-w-[390px] max-w-[390px]">
             <WorkFormItem workForm={workForm} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </motion.div>

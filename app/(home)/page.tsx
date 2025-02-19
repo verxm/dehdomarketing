@@ -43,7 +43,7 @@ export default function Home() {
 
         <Separator className="mt-12" />
 
-        <div className="p-5 lg:px-20 pb-12
+        <div className="lg:px-20 pb-12 my-5
         2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
           <CustomersSession />
         </div>

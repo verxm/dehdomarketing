@@ -2,6 +2,7 @@
 
 import { InstagramInsight } from "@/app/_entities/instagram-insights";
 import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { motion } from "framer-motion";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 interface InstagramInsightsParameters {
@@ -47,7 +48,10 @@ const InstagramInsights = ({
     } satisfies ChartConfig
 
     return (
-        <div className="flex flex-col items-center gap-2">
+        <motion.div 
+            whileInView={{opacity:[0, 1], transition: {duration: 2}}}
+            viewport={{once: true}}
+            className="flex flex-col items-center gap-2">
             <div className="
                 flex flex-row gap-3 
                 text-xxs text-gray-500 italic text-nowrap
@@ -83,7 +87,7 @@ const InstagramInsights = ({
                     <Bar dataKey="after" fill="var(--color-after)" radius={4} />
                 </BarChart>
             </ChartContainer>
-        </div>
+        </motion.div>
     );
 }
 

@@ -1,6 +1,9 @@
+'use client'
+
 import ScrollDownIndicator from "@/components/scroll-down-indicator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { motion } from "framer-motion";
 
 interface CustomerPersonalCommentParameters {
     comment: string,
@@ -20,9 +23,13 @@ const CustomerPersonalComment = ({ comment }: CustomerPersonalCommentParameters)
             </div>
 
             <AlertDescription className="italic h-[150px] overflow-y-auto whitespace-pre-line">
-                "{comment}"
+                <motion.div
+                    whileInView={{y: [150, 0], opacity: [0, 1], transition: {duration: 1}}}
+                    >
+                    "{comment}"
+                </motion.div>
             </AlertDescription>
-            <ScrollDownIndicator/>
+            <ScrollDownIndicator />
         </Alert>
     );
 }

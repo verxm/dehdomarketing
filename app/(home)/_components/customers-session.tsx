@@ -1,12 +1,16 @@
 import { customerRepository } from "@/app/_repositories/customer-local-repository";
 import CustomerItem from "./customer-item"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const CustomersSession = () => {
     const allCustomers = customerRepository.getAll();
 
     return (
-        <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true }}>
             <div className="px-5 mb-7 pt-5 flex flex-col items-center justify-center">
                 <h2 className="text-lg uppercase text-primary font-bold">🚀 Resultados 🚀</h2>
                 <p className="text-sm text-muted-foreground">Acompanhe nossos clientes</p>
@@ -15,9 +19,12 @@ const CustomersSession = () => {
                 <CarouselContent className="pt-2">
                     {allCustomers.map((customer) => (
                         <CarouselItem key={customer.id}>
-                            <div className="p-[-10px]">
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1, transition: { duration: 1 } }}
+                                className="px-5">
                                 <CustomerItem customer={customer} />
-                            </div>
+                            </motion.div>
                         </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -46,7 +53,7 @@ const CustomersSession = () => {
                         border-primary" />
                 </div>
             </Carousel>
-        </>
+        </motion.div>
     );
 }
 

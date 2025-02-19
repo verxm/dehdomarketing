@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import InstagramInsights from "./instagram-insigths";
@@ -5,6 +7,8 @@ import { Compare } from "@/components/ui/compare";
 import { Customer } from "@/app/_entities/customer";
 import CustomerPersonalComment from "./customer-personal-comment";
 import { BsBarChartLine, BsInstagram } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 interface CustomerItemParameters {
     customer: Customer
@@ -12,12 +16,15 @@ interface CustomerItemParameters {
 
 const CustomerItem = ({ customer }: CustomerItemParameters) => {
     const instagramRedirectLink = `https://www.instagram.com/${customer.instagramIdentifier}`;
+    const customerInstagramIdentifier = `@${customer.instagramIdentifier}`
 
     return (
         <Card className="mt-20 border-primary/50">
             <CardContent className="p-0">
                 <div className="flex flex-col">
-                    <div className="items-center flex flex-col pt-5">
+                    <motion.div 
+                        whileInView={{scale: [0, 1], shadow: "xl", transition: {duration: 0.4}}}
+                        className="items-center flex flex-col pt-5">
                         <a href={instagramRedirectLink} target="_blank">
                             <Image
                                 className="
@@ -29,13 +36,15 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                                 src={customer.logoPath}
                                 alt={customer.name} height={180} width={180} />
                         </a>
-                    </div>
+                    </motion.div>
                     <div className="flex flex-col items-center pt-5">
                         <a
                             className="text-gray-500 font-bold"
                             href={instagramRedirectLink}
                             target="_blank">
-                            @{customer.instagramIdentifier}
+                                <TextAnimate animation="scaleDown" by="character">
+                                    {customerInstagramIdentifier}
+                                </TextAnimate>
                         </a>
                     </div>
                     <div className="

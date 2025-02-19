@@ -53,7 +53,6 @@ const ContacButton = ({ contactType, animationDelay }: ContactButtonParameters) 
                             transition:{
                                 duration: 0.8,
                                 delay: animationDelay
-                                //ease: [0, 0.71, 0.2, 1.01],
                             }
                         }}
                         viewport={{once:true}}

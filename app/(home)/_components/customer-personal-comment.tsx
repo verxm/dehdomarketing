@@ -25,7 +25,7 @@ const CustomerPersonalComment = ({ comment }: CustomerPersonalCommentParameters)
             <AlertDescription className="italic h-[150px] overflow-y-auto whitespace-pre-line">
                 <motion.div
                     whileInView={{y: [150, 0], opacity: [0, 1], transition: {duration: 1}}}
-                    >
+                    viewport={{once: true}} >
                     "{comment}"
                 </motion.div>
             </AlertDescription>

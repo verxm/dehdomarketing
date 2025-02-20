@@ -24,6 +24,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                 <div className="flex flex-col">
                     <motion.div 
                         whileInView={{scale: [0, 1], shadow: "xl", transition: {duration: 0.4}}}
+                        viewport={{once: true}}
                         className="items-center flex flex-col pt-5">
                         <a href={instagramRedirectLink} target="_blank">
                             <Image
@@ -42,7 +43,7 @@ const CustomerItem = ({ customer }: CustomerItemParameters) => {
                             className="text-gray-500 font-bold"
                             href={instagramRedirectLink}
                             target="_blank">
-                                <TextAnimate animation="scaleDown" by="character">
+                                <TextAnimate animation="scaleDown" by="character" once={true}>
                                     {customerInstagramIdentifier}
                                 </TextAnimate>
                         </a>

@@ -11,6 +11,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer"
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface ServiceDetailParameters {
@@ -37,7 +38,10 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                     </DrawerHeader>
                     <div className="p-2 pb-0">
                         <div className="space-x-2">
-                            <div className="relative w-full h-[250px] flex flex-col items-center justify-center">
+                            <motion.div
+                                initial={{opacity: 0}}
+                                whileInView={{opacity: 1, transition: {duration: 1.5}}} 
+                                className="relative w-full h-[250px] flex flex-col items-center justify-center">
                                 <Image
                                     src={service.image}
                                     alt={service.name}
@@ -46,11 +50,16 @@ const ServiceDetail = ({ service }: ServiceDetailParameters) => {
                                     }}
                                     fill
                                     className="rounded-2xl" />
+                            </motion.div>
+                            <div className="h-[220px] overflow-auto">
+                                <motion.p 
+                                    whileInView={{y: [150, 0], opacity: [0, 1], transition: {duration: 1}}}
+                                    viewport={{once: true}}
+                                    className=" mt-5 whitespace-pre-line text-sm flex flex-col justify-between">
+                                    {service.description}
+                                </motion.p>
                             </div>
-
-                            <p className="max-h-[200px] overflow-auto mt-5 whitespace-pre-line text-sm flex flex-col justify-between">
-                                {service.description}
-                            </p>
+                            
                             <ScrollDownIndicator/>
                         </div>
                     </div>

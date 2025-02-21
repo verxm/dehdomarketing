@@ -17,21 +17,22 @@ const ServicesSession = () => {
                 <p className="text-sm text-muted-foreground">Como podemos ajudar...</p>
             </div>
 
-            <div className="
-                flex gap-4
+            <motion.div 
+                initial={{x: 100}}
+                whileInView={{x: [100, 0], transition: {duration:0.5}}} 
+                viewport={{once: true}}
+                className="flex gap-4
                 px-5
                 overflow-x-auto [&::-webkit-scrollbar]:hidden
                 2xl:justify-center">
                 {services.map((service) => (
-                    <motion.div 
-                        whileInView={{x: [100, 0], transition: {duration:0.5}}} 
-                        viewport={{once: true}}
+                    <div 
                         key={service.id} 
                         className="min-w-[350px] max-w-[350px]">
                         <ServiceItem service={service} />
-                    </motion.div>
+                    </div>
                 ))}
-            </div>
+            </motion.div>
         </motion.div>
     );
 }

@@ -15,7 +15,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const tanPearl = localFont({
+const tanPearl = localFont({
   src: "./fonts/tan-pearl.otf",
   variable: "--font-tanpearl",
   weight: "300",

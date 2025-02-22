@@ -28,7 +28,7 @@ const PresentationSession = () => {
                         rounded-full shadow-md
                         absolute mt-[200px]
                         max-sm:[--width-from:350px] max-sm:[--height-from:350px]
-                        [--width-to:200px] [--height-to:200px]">
+                        [--width-to:180px] [--height-to:180px]">
 
                     <Image
                         src="/logo.png"

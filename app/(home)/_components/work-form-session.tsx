@@ -18,7 +18,7 @@ const WorkFormSession = () => {
 
       <motion.div
         initial={{x: 100}}
-        whileInView={{x: [100, 0], transition: {duration:0.5}}} 
+        whileInView={{x: 0, transition: {duration:0.5}}} 
         viewport={{once: true}}
         className="
           flex gap-4

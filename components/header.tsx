@@ -29,7 +29,7 @@ const Header = () => {
                     <CardContent className="p-2 justify-between flex flex-row ml-2 items-center">
                         <Link href="/">
                             <Image
-                                src="/logo-sem-fundo-marrom.png"
+                                src="/logo-sem-fundo-marrom.PNG"
                                 alt="Deh do Marketing"
                                 height={100} width={70} />
                         </Link>

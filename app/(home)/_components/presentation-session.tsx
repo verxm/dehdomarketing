@@ -31,7 +31,7 @@ const PresentationSession = () => {
                         [--width-to:180px] [--height-to:180px]">
 
                     <Image
-                        src="/logo.png"
+                        src="/logo.PNG"
                         alt="Logo Deh do Marketing"
                         className="h-full w-full object-cover"
                         width={800} height={800} />

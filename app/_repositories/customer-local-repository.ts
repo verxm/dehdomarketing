@@ -36,7 +36,7 @@ const allCustomers = [
             reels: 218,
             totalFollowers: 5283,
             stories: 195,
-            profileImagePath: "/insta-orlandoborala-antes.png"
+            profileImagePath: "/insta-orlandoborala-antes.PNG"
         },
         afterInstagramInsights: {
             dateRange: "17/12/2024 à 15/01/2025",
@@ -44,7 +44,7 @@ const allCustomers = [
             reels: 32627,
             totalFollowers: 9129,
             stories: 1619,
-            profileImagePath: "/insta-orlandoborala-depois.png"
+            profileImagePath: "/insta-orlandoborala-depois.PNG"
         },
     },
     {

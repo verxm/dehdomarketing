@@ -15,11 +15,19 @@ const WhoWeAreSession = () => {
         hover:translate-x-0 hover:bg-primary/90
         border-primary/40
         rounded-full mr-3" variant="outline" size="sm">
-        <Key /> Virar a Chave
+        <motion.div animate={{
+             scale: [1, 1, 1.2, 1, 1],
+        }}
+            transition={{
+                duration: 3,
+                repeat: Infinity,
+            }}>
+            <Key /></motion.div> Virar a Chave
+        
     </Button>;
 
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1 } }}
             viewport={{ once: true }}
@@ -45,9 +53,12 @@ const WhoWeAreSession = () => {
                     pt-4">{description}
                     </p>
 
-                    <div className="flex justify-center pt-7">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
+                        className="flex justify-center pt-7">
                         <RequestBudget triggerElement={budgetButton} />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </motion.div>

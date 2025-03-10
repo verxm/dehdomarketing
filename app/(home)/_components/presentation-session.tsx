@@ -24,17 +24,16 @@ const PresentationSession = () => {
                     }}
                     transition={{ duration: 2, ease: "easeInOut" }}
                     className="
-                        border-x-4 border-white bg-primary 
-                        rounded-full shadow-md
                         absolute mt-[200px]
-                        max-sm:[--width-from:350px] max-sm:[--height-from:350px]
-                        [--width-to:180px] [--height-to:180px]">
+                        shadow-lg rounded-full
+                        max-sm:[--width-from:228px] max-sm:[--height-from:450px]
+                        [--width-to:118px] [--height-to:230px]">
 
                     <Image
-                        src="/logo.PNG"
+                        src="/logo-nova-fundo-marrom.png"
                         alt="Logo Deh do Marketing"
                         className="h-full w-full object-cover"
-                        width={800} height={800} />
+                        fill />
                 </motion.div>
             </div>
 

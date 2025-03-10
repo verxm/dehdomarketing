@@ -29,9 +29,9 @@ const Header = () => {
                     <CardContent className="p-2 justify-between flex flex-row ml-2 items-center">
                         <Link href="/">
                             <Image
-                                src="/logo-sem-fundo-marrom.PNG"
+                                src="/logo-nova-sem-fundo.png"
                                 alt="Deh do Marketing"
-                                height={100} width={70} />
+                                height={50} width={35} />
                         </Link>
                         <RequestBudget triggerElement={budgetButton} />
 

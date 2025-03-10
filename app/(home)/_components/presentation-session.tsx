@@ -13,8 +13,8 @@ const PresentationSession = () => {
             <div className="flex flex-col items-center justify-center">
                 <motion.div
                     initial={{
-                        width: "var(--width-from, 550px)",
-                        height: "var(--height-from, 550px)",
+                        width: "var(--width-from, 228px)",
+                        height: "var(--height-from, 450px)",
                         y: 110
                     }}
                     animate={{

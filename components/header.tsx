@@ -31,7 +31,7 @@ const Header = () => {
                             <Image
                                 src="/logo-nova-sem-fundo.png"
                                 alt="Deh do Marketing"
-                                height={50} width={35} />
+                                height={50} width={68} />
                         </Link>
                         <RequestBudget triggerElement={budgetButton} />
 

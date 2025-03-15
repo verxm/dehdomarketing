@@ -13,8 +13,9 @@ const PresentationSession = () => {
             <div className="flex flex-col items-center justify-center">
                 <motion.div
                     initial={{
-                        width: "var(--width-from, 228px)",
-                        height: "var(--height-from, 450px)",
+                        borderRadius: "130px",
+                        width: "var(--width-from, 400px)",
+                        height: "var(--height-from, 445px)",
                         y: 110
                     }}
                     animate={{
@@ -25,14 +26,14 @@ const PresentationSession = () => {
                     transition={{ duration: 2, ease: "easeInOut" }}
                     className="
                         absolute mt-[200px]
-                        shadow-lg rounded-full
-                        max-sm:[--width-from:228px] max-sm:[--height-from:450px]
-                        [--width-to:118px] [--height-to:230px]">
+                        shadow-lg rounded-[4rem]
+                        max-sm:[--width-from:400px] max-sm:[--height-from:445px]
+                        [--width-to:200px] [--height-to:230px]">
 
                     <Image
                         src="/logo-nova-fundo-marrom.png"
                         alt="Logo Deh do Marketing"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover pm-[-50px] mt-[2px]"
                         fill />
                 </motion.div>
             </div>

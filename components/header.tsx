@@ -14,7 +14,7 @@ const Header = () => {
         translate-x-0 
         hover:translate-x-0 hover:bg-primary/90
         border-primary/40 shadow-md shadow-tertiary
-        rounded-full mr-3" variant="outline" size="sm">
+        rounded-xl mr-3" variant="outline" size="sm">
         Solicitar Orçamento <HandCoins />
     </Button>;
 

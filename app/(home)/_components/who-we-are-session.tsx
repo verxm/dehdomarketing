@@ -14,7 +14,7 @@ const WhoWeAreSession = () => {
         translate-x-0 
         hover:translate-x-0 hover:bg-primary/90
         border-primary/40
-        rounded-full mr-3" variant="outline" size="sm">
+        rounded-xl mr-3" variant="outline" size="sm">
         <motion.div animate={{
              scale: [1, 1, 1.2, 1, 1],
         }}

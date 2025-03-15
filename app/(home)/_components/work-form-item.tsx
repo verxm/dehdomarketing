@@ -16,10 +16,10 @@ const WorkFormItem = ({ workForm }: WorkFormParameters) => {
             <CardContent className="p-0">
                 <div className="flex flex-col">
                     <div className="
-                  flex flex-col items-center 
-                  h-20
-                  rounded-2xl 
-                  rounded-b-none">
+                        flex flex-col items-center 
+                        h-20
+                        rounded-2xl 
+                        rounded-b-none">
                         <Image
                             src={workForm.imagePath}
                             alt={workForm.title}

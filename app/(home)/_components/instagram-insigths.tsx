@@ -71,8 +71,7 @@ const InstagramInsights = ({
                         tickLine={false}
                         tickMargin={10}
                         axisLine={false}
-                        tickFormatter={(value) => `${value}`
-                        }
+                        tickFormatter={ (value) => `${value}` }
                     />
                     <YAxis
                         className="text-xxs"

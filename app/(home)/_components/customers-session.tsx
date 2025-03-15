@@ -28,30 +28,46 @@ const CustomersSession = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <div className="
-                    flex items-center justify-center 
-                    absolute top-16 left-10  z-20
-                    md:left-48
-                    lg:left-72
-                    xl:left-96">
+                <motion.div 
+                    animate={{
+                        x: [0, 5, 0]
+                    }}
+                    transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                    }}
+                    className="
+                        flex items-center justify-center 
+                        absolute top-16 left-10  z-20
+                        md:left-48
+                        lg:left-72
+                        xl:left-96">
                     <CarouselPrevious className="
                         hover:text-white text-primary 
                         relative left-0 translate-x-0 
                         hover:translate-x-0 hover:bg-primary/90
                         border-primary" />
-                </div>
-                <div className="
-                    flex items-center justify-center 
-                    absolute top-16 right-10
-                    md:right-48
-                    lg:right-72
-                    xl:right-96">
+                </motion.div>
+                <motion.div 
+                    animate={{
+                        x: [5, 0, 5]
+                    }}
+                    transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                    }}
+                    className="
+                        flex items-center justify-center 
+                        absolute top-16 right-10
+                        md:right-48
+                        lg:right-72
+                        xl:right-96">
                     <CarouselNext className="
                         hover:text-white text-primary 
                         relative right-0 translate-x-0 
                         hover:translate-x-0 hover:bg-primary/90
                         border-primary" />
-                </div>
+                </motion.div>
             </Carousel>
         </motion.div>
     );

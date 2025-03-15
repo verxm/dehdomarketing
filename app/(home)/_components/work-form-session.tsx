@@ -28,7 +28,7 @@ const WorkFormSession = () => {
         {allWorkForms.map((workForm) => (
           <div
             key={workForm.id} 
-            className="min-w-[390px] max-w-[390px]">
+            className="min-w-[350px] max-w-[350px]">
             <WorkFormItem workForm={workForm} />
           </div>
         ))}

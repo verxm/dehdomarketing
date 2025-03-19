@@ -13,7 +13,7 @@ const allServices = [
         id: "2",
         name: "Gestão de tráfego pago",
         description: "🚀 Gestão de Tráfego Pago que Transforma Cliques em Clientes!\n\nChegou a hora de levar sua marca ao próximo nível. Criamos e gerenciamos campanhas patrocinadas nas redes sociais para potencializar sua presença digital, ampliar o alcance do seu conteúdo e transformar engajamento em vendas.\n\n💡 Porque quem não é visto, não é lembrado – e quem não é lembrado, perde oportunidades!\n\nGaranta que sua marca seja a escolha certa para os seus clientes.",
-        image: "/trafego-page.png",
+        image: "/service-gestao-trafego.jpeg",
         icon: ChartNoAxesCombined
     },
     {
